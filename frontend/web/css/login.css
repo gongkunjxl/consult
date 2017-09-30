@@ -1,0 +1,84 @@
+.log-reg
+{
+	position: relative;
+	float: right;
+	width: 90px;
+	height: 100px;
+	padding-top: 39px;
+	text-align: center;
+	background-color: #69c;
+}
+.label-style{
+	width: 20%; 
+	float: left;
+	text-align: right;
+	margin-right:10px; 
+	font-size: 15px;  
+	line-height: 30px;
+}
+.label-code{
+	display: inline-block;
+    /*position: absolute;*/
+    /*right: 5px;*/
+    float: left;
+    top: 5px;
+    z-index: 1;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #288eff;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+}
+/* the image*/
+.image-show
+{
+	/*float: left;*/
+	margin-top: 30px;
+	width: 80px;
+	height: 80px;
+	margin-left: 20%;
+	background-color: #69c;
+	/*background: url("../images/pic_id.png");*/
+}
+.reg-button{
+	background: #6ecb09; 
+	width: 20%;
+	margin-left: 40%;
+	display: block;
+	height: 40px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 500;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

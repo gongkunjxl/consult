@@ -1,0 +1,10 @@
+.log-reg
+{
+	position: relative;
+	float: right;
+	width: 90px;
+	height: 100px;
+	padding-top: 25px;
+	text-align: center;
+	background-color: #69c;
+}
