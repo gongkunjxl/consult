@@ -33,6 +33,10 @@ class ComposerStaticInit085168ca69d53034fdda78af258499e7
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'g' => 
+        array (
+            'gmars\\sms\\' => 10,
+        ),
         'd' => 
         array (
             'dmstr\\' => 6,
@@ -121,6 +125,10 @@ class ComposerStaticInit085168ca69d53034fdda78af258499e7
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+        ),
+        'gmars\\sms\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gmars/yii2-sms',
         ),
         'dmstr\\' => 
         array (

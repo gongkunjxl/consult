@@ -3416,5 +3416,50 @@
             "bower-asset-main": "dist/typeahead.bundle.js"
         },
         "installation-source": "dist"
+    },
+    {
+        "name": "gmars/yii2-sms",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/gmars/yii2-sms.git",
+            "reference": "71b95706bdd36aa3b96e968698f54773c3e28d66"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://files.phpcomposer.com/files/gmars/yii2-sms/71b95706bdd36aa3b96e968698f54773c3e28d66.zip",
+            "reference": "71b95706bdd36aa3b96e968698f54773c3e28d66",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "time": "2017-04-25T17:59:38+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "gmars\\sms\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "weiyongqiang",
+                "email": "hayixia606@163.com"
+            }
+        ],
+        "description": "a library for yii2.this library instanced SMS api include alidayu and aliyunsms and so on,i will instance all most popular SMS API",
+        "homepage": "http://www.weiyongqiang.com/",
+        "keywords": [
+            "alidayu",
+            "sms",
+            "yii2",
+            "yii2 library"
+        ]
     }
 ]

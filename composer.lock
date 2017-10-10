@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bb15d2509efcd8bcd54db171ef02f7b",
+    "content-hash": "2c5b0a1df5cc90b88c0215b484981dcc",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -509,6 +509,49 @@
                 "icon"
             ],
             "time": "2016-10-24T15:52:54+00:00"
+        },
+        {
+            "name": "gmars/yii2-sms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gmars/yii2-sms.git",
+                "reference": "71b95706bdd36aa3b96e968698f54773c3e28d66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/gmars/yii2-sms/71b95706bdd36aa3b96e968698f54773c3e28d66.zip",
+                "reference": "71b95706bdd36aa3b96e968698f54773c3e28d66",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "gmars\\sms\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "weiyongqiang",
+                    "email": "hayixia606@163.com"
+                }
+            ],
+            "description": "a library for yii2.this library instanced SMS api include alidayu and aliyunsms and so on,i will instance all most popular SMS API",
+            "homepage": "http://www.weiyongqiang.com/",
+            "keywords": [
+                "alidayu",
+                "sms",
+                "yii2",
+                "yii2 library"
+            ],
+            "time": "2017-04-25 17:59:38"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
@@ -3303,7 +3346,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "gmars/yii2-sms": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

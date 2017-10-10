@@ -702,7 +702,30 @@ class SiteController extends Controller
                  're_data' => $getinfo,
            ];
 
-        return $this->render('testdb/main',$data);
+         $smsObj = new \gmars\sms\Sms(
+            'ALIDAYU',
+            [
+                'appkey'=>'23641534',
+                'secretkey'=>'8fef13ec84e4d3727f8485e88b0b102b'
+            ]
+        );
+        $flag=$smsObj->send([
+                  'mobile' => '18916294857',
+                  'signname' => '趣果仁',
+                  'templatecode' => 'SMS_47855078',
+                  'extend' => '123456',
+                  'data' => [
+                      'number' => '1715',
+                      'time' => '10'
+                  ],
+        ]);
+        $data['flag'] = $flag;
+        if($flag->code == 0){
+            $data['success'] = 'success';
+        }else{
+            $data['success'] = 'failed';
+        }
+        return $this->render('testdb/main',['data' => $data]);
     }
    
 
