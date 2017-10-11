@@ -7,6 +7,7 @@ use yii\filters\VerbFilter;
 use app\models\UploadForm;
 use yii\web\UploadedFile;
 use yii\web\levelSort;
+use app\models\SmsDemo;
 /**
  * Site controller
  */
@@ -141,7 +142,8 @@ class SiteController extends Controller
             //普通用户
             if($uType==2){
                 $db = Yii::$app->db;   
-                $time = strtotime(date('Y-m-d',time()).' 00:00:00');
+                // $time = strtotime(date('Y-m-d',time()).' 00:00:00');
+                $time = time();
                 $nickname = "user_".$uVerycode;
                 $insert_data = [
                     'username' => $uTel,
@@ -182,7 +184,8 @@ class SiteController extends Controller
                 $score=4.5;
 
                 $db = Yii::$app->db;   
-                $time = strtotime(date('Y-m-d',time()).' 00:00:00');
+                // $time = strtotime(date('Y-m-d',time()).' 00:00:00');
+                $time = time();
                 // $nickname = "user_".$uVerycode;
                 $insert_data = [
                     'username' => $uTel,
@@ -223,8 +226,6 @@ class SiteController extends Controller
          }
     }
 
-
-
     /*
         * 手机号码注册验证 
     */
@@ -253,6 +254,106 @@ class SiteController extends Controller
          }
 
     }
+    /*
+      * 获取手机的验证码
+    */
+    public function actionGetcode()
+    {
+    	if (Yii::$app->request->isAjax) 
+        {
+            $data = Yii::$app->request->post();
+            $db = Yii::$app->db;
+
+            $username= explode(":", $data['username']);
+            $phoneNum= $username[0];
+            
+            $re_data=[
+                'status' => '100',
+            ];
+            //初始化发送
+            $key_id = "LTAI9M8T8TBHLxH4";
+            $key_secret =  "50Gk84Q42Pr6AcBmeG7D13faZMWXuv";
+            $signname = "心事网";
+            $sms_tmp = "SMS_102295009";
+            $demo = new SmsDemo($key_id,$key_secret);
+            //验证码生成
+            $authnum='';
+            $ychar = "0,1,2,3,4,6,7,8,9";  
+			$list = explode(",",$ychar);  
+			for($i=0; $i<4; $i++)
+			{  
+				$randnum = mt_rand( 0,8 );							  
+				$authnum .= $list[$randnum];  
+			}
+			//调用发送函数
+			$response = $demo->sendSms(
+			    $signname,   // 短信签名
+			    $sms_tmp,   // 短信模板编号
+			    $phoneNum,   // 短信接收者
+			    Array(     // 短信模板中字段的值
+			        "code"=> $authnum,
+			        "product"=>"xinshiwang"
+			    ),
+			    "123"
+			);
+
+			//发送成功存入数据库
+			if($response->Code == "OK"){
+				//存入数据库
+				$db = Yii::$app->db;   
+                // $time = strtotime(date('Y-m-d',time()).' 00:00:00');
+                $time = time();
+                $insert_data = [
+                    'phone' => $phoneNum,
+                    'code' => $authnum,
+                    'ctime' => $time
+                ];
+
+                $rep = $db->createCommand()->insert('con_code',$insert_data)->execute();
+                if($rep){
+                	$re_data['status'] = '200';
+                }
+			}
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            return $re_data;
+         }
+    }
+
+    /*
+     * 实现验证码的验证
+    */
+    public function actionVercode()
+    {
+    	if (Yii::$app->request->isAjax) 
+        {
+            $data = Yii::$app->request->post();
+            $db = Yii::$app->db;
+
+            $phoneNum= explode(":", $data['phoneNum']);
+            $verCode= explode(":", $data['verCode']);
+            $phoneNum= $phoneNum[0];
+            $verCode= $verCode[0];
+
+            $re_data=[
+                'status' => '100',
+            ];
+			//验证有效性
+			$db = Yii::$app->db;   
+            $sel_sql = "SELECT * FROM con_code WHERE phone='$phoneNum' AND code='$verCode' ";
+            $getinfo =  $db->createCommand($sel_sql)->queryOne();
+            if(!empty($getinfo)){
+            	$time = $getinfo['ctime'];
+               	$now=strtotime('-15 minute');
+               	if($time > $now){
+               		$re_data['status'] = '200';
+              	}
+            }
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            return $re_data;
+        }
+    }
+
+
     /*
         *对主题进行请求 弹出主题列表页面
     */
@@ -702,29 +803,78 @@ class SiteController extends Controller
                  're_data' => $getinfo,
            ];
 
-         $smsObj = new \gmars\sms\Sms(
-            'ALIDAYU',
-            [
-                'appkey'=>'23641534',
-                'secretkey'=>'8fef13ec84e4d3727f8485e88b0b102b'
-            ]
-        );
-        $flag=$smsObj->send([
-                  'mobile' => '18916294857',
-                  'signname' => '趣果仁',
-                  'templatecode' => 'SMS_47855078',
-                  'extend' => '123456',
-                  'data' => [
-                      'number' => '1715',
-                      'time' => '10'
-                  ],
-        ]);
-        $data['flag'] = $flag;
-        if($flag->code == 0){
-            $data['success'] = 'success';
-        }else{
-            $data['success'] = 'failed';
-        }
+        //  $smsObj = new \gmars\sms\Sms(
+        //     'ALIDAYU',
+        //     [
+        //         'appkey'=>'LTAI9M8T8TBHLxH4',
+        //         'secretkey'=>'50Gk84Q42Pr6AcBmeG7D13faZMWXuv'
+        //     ]
+        // );
+        // $flag=$smsObj->send([
+        //           'mobile' => '18916294857',
+        //           'signname' => '心事网',
+        //           'templatecode' => 'SMS_102295009',
+        //           'extend' => '123456',
+        //           'data' => [
+        //               'code' => '1315',
+        //               'time' => '10'
+        //           ],
+        // ]);
+
+        //   $smsObj = new \gmars\sms\Sms(
+        //     'ALIYUN',
+        //     [
+        //         'appkey'=>'LTAI9M8T8TBHLxH4',
+        //         'secretkey'=>'50Gk84Q42Pr6AcBmeG7D13faZMWXuv'
+        //     ]
+        // );
+        // $flag=$smsObj->send([
+        //           'mobile' => '18916294857',
+        //           'signname' => '心事网',
+        //           'templatecode' => 'SMS_102295009',
+        //           'data' => [
+        //               'code' => '1315',
+        //               'product' => '100'
+        //           ],
+        // ]);  
+
+        $demo = new SmsDemo(
+		    "LTAI9M8T8TBHLxH4",
+		    "50Gk84Q42Pr6AcBmeG7D13faZMWXuv"
+		);
+		$response = $demo->sendSms(
+		    "心事网", // 短信签名
+		    "SMS_102295009", // 短信模板编号
+		    "18916294857", // 短信接收者
+		    Array(  // 短信模板中字段的值
+		        "code"=>"12345",
+		        "product"=>"dsd"
+		    ),
+		    "123"
+		);
+		// print_r($response);
+		$data['send_response'] = $response;
+		$data['code'] = $response->Code;
+
+		// echo "SmsDemo::queryDetails\n";
+		// $response = $demo->queryDetails(
+		//     "18916294857",  // phoneNumbers 电话号码
+		//     "20170718", // sendDate 发送时间
+		//     10, // pageSize 分页大小
+		//     1 // currentPage 当前页码
+		//     // "abcd" // bizId 短信发送流水号，选填
+		// );
+		// $data['rev_response'] = $response;
+		// print_r($response);
+
+        // $data['dir'] =  dirname(__DIR__) . '/api_sdk/vendor/autoload.php';
+
+        // $data['flag'] = $flag;
+        // if($flag->code == 0){
+        //     $data['success'] = 'success';
+        // }else{
+        //     $data['success'] = 'failed';
+        // }
         return $this->render('testdb/main',['data' => $data]);
     }
    

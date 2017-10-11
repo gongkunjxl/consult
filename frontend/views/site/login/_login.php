@@ -55,7 +55,7 @@ $this->title = 'Login';
 		  </div>
 </div>
 
-	<!-- <a href="<?php //echo Url::to(['site/testdb']); ?>" style="width: 20%;" class="btn btn-info" "> 登陆</a> -->
+	<a href="<?php echo Url::to(['site/testdb']); ?>" style="width: 20%;" class="btn btn-info" "> 登陆</a>
 
 <script type="text/javascript">
 	function userLogin()

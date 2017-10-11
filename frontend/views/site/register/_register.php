@@ -147,7 +147,7 @@ $this->title = 'Register';
 		function settime(obj) { 
 		    if (countdown == 0) { 
 		        obj.removeAttribute("disabled");    
-		        obj.value="免费获取验证码"; 
+		        obj.value="获取验证码"; 
 		        countdown = 60; 
 		        return;
 		    } else { 
@@ -192,21 +192,59 @@ $this->title = 'Register';
 			return re_status;
 		}
 
-		//获取手机验证码
-		function getVercode()
+		//获取手机验证码 100是获取成功 200是获取失败
+		function getVercode(username)
 		{
+			var data={
+				username: username,
+			};
+			var re_status=100;
+			$.ajax({
+			    url: '<?php echo Url::to(['site/getcode']); ?>',
+			    type: 'post',
+			    async: false,
+			    data: data,
+			    success: function (data) {
+			     	alert('验证码发送成功');
+			     	re_status = data.status;
+			    },
+			    error: function(data) {
+               	 	alert("Sorry error");
+				}
+
+			});
+			return re_status;
 
 		}
-		//验证码的有效性
-		function checkVercode(vercode)
+		//验证码的有效性 五分钟内有效
+		function checkVercode(phoneNum,verCode)
 		{
-			
+			var data={
+				phoneNum: phoneNum,
+				verCode: verCode
+			};
+			var re_status=100;
+			$.ajax({
+			    url: '<?php echo Url::to(['site/vercode']); ?>',
+			    type: 'post',
+			    async: false,
+			    data: data,
+			    success: function (data) {
+			     	// alert(data.status);
+			     	re_status = data.status;
+			    },
+			    error: function(data) {
+               	 	alert("Sorry error");
+				}
+
+			});
+			return re_status;
 		}
 
 		// 获取验证码接口
 		function docGetcode(obj)
 		{	
-			//判断手机号已经注册
+			//判断手机号已经注册 
 			var username = document.getElementById("docTel").value;
 			var status = veryPhone(username);
 			if(status == 200){
@@ -215,7 +253,7 @@ $this->title = 'Register';
 				alert('手机号已经注册 请直接登录');
 				return;
 			}	
-			// getVercode()
+			getVercode(username);
 		}
 
 
@@ -223,13 +261,15 @@ $this->title = 'Register';
 		function doctorReg($this)
 		{
 
-			// alert('doctorLogin');
+			alert('doctorLogin');
 			var user_type = 1;
-
 			var docTel = document.getElementById("docTel").value;
-			var docVerycode = document.getElementById("docVerycode").value;
+			var vercode = document.getElementById("docVerycode").value;
 			//验证验证码有效性
-
+			if(checkVercode(docTel,vercode)==100){
+				alert('验证码错误');
+				return false;
+			}
 
 			var docPassword = document.getElementById("docPassword").value;
 			var confpassword = document.getElementById("confPassword").value;
@@ -289,7 +329,7 @@ $this->title = 'Register';
 			var data={
 				uTel: docTel,
 				uType: user_type,
-				uVerycode: docVerycode,
+				uVerycode: vercode,
 				uPassword: docPassword,
 				nickname: docName,
 				weixin: docWeixin,
@@ -406,7 +446,7 @@ $this->title = 'Register';
 			alert('手机号已经注册 请直接登录');
 			return;
 		}	
-		// getVercode()
+		getVercode(username);
 	}
 
 	//普通用户注册
@@ -415,26 +455,29 @@ $this->title = 'Register';
 		alert('userReg');
 		var user_type = 2;
 		var userTel = document.getElementById("userTel").value;
-		var userVerycode = document.getElementById("userVerycode").value;
+		var vercode = document.getElementById("userVerycode").value;
 		//验证验证码有效性
-
+		if(checkVercode(userTel,vercode)==100){
+			alert('验证码错误');
+			return false;
+		}
 
 		var userPassword = document.getElementById("userPassword").value;
 		var uconfpassword = document.getElementById("uconfPassword").value;
 		if(userPassword.length <6  || uconfpassword.length <6){
-		alert('密码长度至少6个字符');
-		return false;
+			alert('密码长度至少6个字符');
+			return false;
 		}
 		if(userPassword != uconfpassword){
-		alert('两次输入不一样');
-		return false;
+			alert('两次输入不一样');
+			return false;
 		}
 		
 		//下面开始ajax注册 手机号 验证码 密码
 		var data={
 		uTel: userTel,
 		uType: user_type,
-		uVerycode: userVerycode,
+		uVerycode: vercode,
 		uPassword: userPassword,
 		};
 
