@@ -102,13 +102,13 @@ $this->title = 'Register';
 			        <div class="form-group">
 			          <div class="col-md-12">		          	
 			              <label class="label-style"> 密码</label>
-			              <input class="form-control text-width" id="docPassword" placeholder="请输入密码">	           		            		            
+			              <input type="password" class="form-control text-width" id="docPassword" placeholder="请输入密码">	           		            		            
 			          </div>           
 			        </div>
 			        <div class="form-group">
 			          <div class="col-md-12">		          	
 			              <label class="label-style"> 确认密码</label>
-			              <input class="form-control text-width" id="confPassword text-width" placeholder="再次输入密码">	           		            		            
+			              <input type="password" class="form-control text-width" id="confPassword" placeholder="再次输入密码">	           		            		            
 			          </div>           
 			        </div>
 			         <div class="form-group">
