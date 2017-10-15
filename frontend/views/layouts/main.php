@@ -53,7 +53,7 @@ $nickname = $session->get('nickname');
 
         $menuItems = [
             ['label' => Yii::t('app', '&nbsp;&nbsp;首&nbsp;&nbsp;页&nbsp;&nbsp;').' <small>Home</small>' , 'url' => ['site/index'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
-            ['label' => Yii::t('app', '我的帖子').' <small>Service</small>', 'url' => ['site/service'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
+            ['label' => Yii::t('app', '我的帖子').' <small>Service</small>', 'url' => ['site/message'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
             // ['label' => Yii::t('app', '电话倾诉').' <small>Telephone</small>', 'url' => ['site/telephone'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
             // ['label' => Yii::t('app', '专家入驻').' <small>Experts</small>', 'url' => ['site/getexpert'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
 

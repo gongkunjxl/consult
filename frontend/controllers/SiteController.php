@@ -80,6 +80,7 @@ class SiteController extends Controller
                 $session->set('username' , $username);
                 $session->set('nickname',$re_data['nickname']);
                 $session->set('userId',$getinfo['id']);
+                // $session
             }
 
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
@@ -701,6 +702,8 @@ class SiteController extends Controller
         if(!empty($userId))
         {
             $data['status'] = '200';
+
+            //我的发帖
             $db = Yii::$app->db;
             $sel_sql = "SELECT id,title,ctime FROM con_article WHERE userId=$userId";
             $getinfo = Yii::$app->db->createCommand($sel_sql)->queryAll();
@@ -728,9 +731,26 @@ class SiteController extends Controller
                 $index[] = $i++; 
             } 
             array_multisort($a, SORT_ASC, $index, SORT_ASC, $data['getinfo']); 
-
             // usort($data['getinfo'], array($this,'levelSort'));
-        }
+    
+            //我的回帖
+            $sel_sql = "SELECT articleId FROM con_tips where from_id=$userId";
+            $repinfo = Yii::$app->db->createCommand($sel_sql)->queryAll();
+            $length = count($repinfo);
+            for($i=0; $i <$length ; $i++) {   
+                //获取文章的标题等信息
+                $articleId = $repinfo[$i]['articleId'];
+                $sel_sql="SELECT title,ctime FROM con_article WHERE id=$articleId";
+                $artinfo = $db->createCommand($sel_sql)->queryOne();
+                if($artinfo){
+                    $tm=date("Y-m-d H:i:s",$artinfo['ctime']);
+                    $repinfo[$i]['time'] = $tm;
+                    $repinfo[$i]['id'] = $articleId;
+                    $repinfo[$i]['title'] = $artinfo['title'];
+                }
+            }
+            $data['repinfo'] = $repinfo;
+    }
         return $this->render('message/main',['data' => $data]);
     }
 

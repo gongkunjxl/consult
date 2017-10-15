@@ -4,7 +4,7 @@
 $this->title = '消息页面';
 ?>
 <!--  the about -->
-<div style="width:100%; height: 50px;"></div>
+<div style="width:100%; height: 20px;"></div>
 <!-- theme -->
 <?php echo $this->render('_message',['data' => $data]); ?>
 

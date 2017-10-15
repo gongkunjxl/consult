@@ -55,7 +55,7 @@ $this->title = 'Login';
 		  </div>
 </div>
 
-	<!-- <a href="<?php //echo Url::to(['site/testdb']); ?>" style="width: 20%;" class="btn btn-info" "> 登陆</a> -->
+	<a href="<?php echo Url::to(['site/message']); ?>" style="width: 20%;" class="btn btn-info" "> 登陆</a>
 
 <script type="text/javascript">
 	function userLogin()
@@ -86,11 +86,12 @@ $this->title = 'Login';
 		    success: function (data) {
 		     	//实现自动跳转
 		     	if(data.status == 200){
-		     		if(data.user_type == 2){
-		     		 	document.location = '<?php echo Url::to(['site/message']); ?>';
-		     		}else{
-		     			document.location = '<?php echo Url::to(['site/index']); ?>';
-		     		}
+		     		document.location = '<?php echo Url::to(['site/message']); ?>';
+		     		// if(data.user_type == 2){
+		     		//  	document.location = '<?php //echo Url::to(['site/message']); ?>';
+		     		// }else{
+		     		// 	document.location = '<?php //echo Url::to(['site/index']); ?>';
+		     		// }
 		     		
 		     	}else{
 		     		alert('用户名或密码不正确');
