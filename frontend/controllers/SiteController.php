@@ -351,7 +351,7 @@ class SiteController extends Controller
             $getinfo =  $db->createCommand($sel_sql)->queryOne();
             if(!empty($getinfo)){
             	$time = $getinfo['ctime'];
-               	$now=strtotime('-45 minute');
+               	$now=strtotime('-15 minute');
                	if($time > $now){
                		$re_data['status'] = '200';
               	}
