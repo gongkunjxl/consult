@@ -18,7 +18,7 @@ $this->title = 'Login';
 		          <div class="col-xs-12">		            
 		            <div class="control-wrapper">
 		            	<label for="username" class="control-label fa-label"><i class="fa fa-user fa-medium"></i></label>
-		            	<input type="text" class="form-control" id="username" placeholder="Telephone">
+		            	<input type="text" class="form-control" id="username" placeholder="手机号">
 		            </div>		            	            
 		          </div>              
 		        </div>
@@ -26,7 +26,7 @@ $this->title = 'Login';
 		          <div class="col-md-12">
 		          	<div class="control-wrapper">
 		            	<label for="password" class="control-label fa-label"><i class="fa fa-lock fa-medium"></i></label>
-		            	<input type="password" class="form-control" id="password" placeholder="Password">
+		            	<input type="password" class="form-control" id="password" placeholder="密码">
 		            </div>
 		          </div>
 		        </div>
@@ -48,8 +48,8 @@ $this->title = 'Login';
 		          </div>
 		        </div>
 		        <hr>
-		         <div class="text-center">
-		      	<a href="<?php echo Url::to(['site/register']); ?>" class="templatemo-create-new">创建新账号 <i class="fa fa-arrow-circle-o-right"></i></a>	
+		         <div class="text-center" >
+		      	<a href="<?php echo Url::to(['site/register']); ?>" class="templatemo-create-new" style="font-weight: 400; color:red">注册</a>	
 		      </div>
 		      </div>
 		  </div>

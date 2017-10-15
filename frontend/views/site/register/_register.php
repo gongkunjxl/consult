@@ -21,7 +21,62 @@ $this->title = 'Register';
 <div class="swiper-container" style="width: 70%; margin-top: 130px !important;">
 	<div class="my-pagination"><ul class="my-pagination-ul"></ul></div>
 	<div class="swiper-wrapper">
-    	
+
+		<!-- 普通用户的注册 -->
+    	<div class="swiper-slide" >
+        	<div class="user_zc_body">
+                
+        		  <h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">用户注册</h3>
+	<!-- <div class="container"> -->
+		<div class="col-md-12" >			
+			<div class="form-horizontal templatemo-create-account templatemo-container">
+				<div class="form-inner">
+					<div class="form-group">
+			          <div class="col-md-12" style="text-align: center;">		          	
+			            <!-- <label for="first_name" class="control-label" style="width: 20%; float: left;line-height: 30px;">用户名:</label> -->
+			            <label class="label-style"> 手机号</label>
+			            <input type="text" style="width: 40%;float: left;" class="form-control" id="userTel" placeholder="请输入手机号">            		            		            
+			          </div>             
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-12" style="text-align: center;">		          	
+			             <label class="label-style"> 验证码</label>
+			            <input type="text" style="width: 20%;float: left; margin-right: 20px;" class="form-control" id="userVerycode" placeholder="请输入验证码"> 
+			            <!-- <span class="label-code"> 获取验证码</span>        		            		             -->
+			          	 <input type="button" class="label-code" value="获取验证码" id="btn" onclick="userGetcode(this)">
+			          </div>              
+			        </div>	
+			         <div class="form-group">
+			          <div class="col-md-12" style="text-align: center;">		          	
+			             <label class="label-style"> 昵称:</label>
+			            <input type="text" style="width: 40%;float: left;" class="form-control" id="userNickname" placeholder="请输入昵称">     
+			          </div>              
+			        </div>			
+			        <div class="form-group">
+			          <div class="col-md-12">		          	
+			              <label class="label-style"> 密码</label>
+			              <input type="password" style="width: 40%;float: left;" class="form-control" id="userPassword" placeholder="请输入密码">	           		            		            
+			          </div>           
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-12">		          	
+			              <label class="label-style"> 确认密码</label>
+			              <input type="password" style="width: 40%;float: left;" class="form-control" id="uconfPassword" placeholder="再次输入密码">	           		            		            
+			          </div>           
+			        </div>
+
+				</div>	
+				  	<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 30%;" onclick="userReg();" >立即注册</button></p></div>
+				   <div style="height: 100px;"></div>		    	
+		      </div>		      
+		</div>
+        
+        </div>
+
+	</div>
+
+	<!-- 医生注册 -->
+
 		<div class="swiper-slide">
 			<div class="user_zc_body">
 				  <h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">医生注册</h3>
@@ -70,22 +125,22 @@ $this->title = 'Register';
 			        </div>
 			         <div class="form-group">
 			          <div class="col-md-12">		          	
-			              <label class="label-style"> 线上预约价格</label>
-			              <input type="text" style="width: 40%;float: left;" class="form-control" id="onPrice" placeholder="线上预约价格">	
+			              <label class="label-style" style="font-size: 14px;">电话/视频咨询价格</label>
+			              <input type="text" style="width: 40%;float: left;" class="form-control" id="onPrice" placeholder="电话/视频咨询价格">	
 			              <label style="margin-top: 5px; font-size:16px;font-weight: 500;color: red" >&nbsp;&nbsp;	/小时</label>           		            		            
 			          </div>           
 			        </div>
 			         <div class="form-group">
 			          <div class="col-md-12">		          	
-			              <label class="label-style"> 线下预约价格</label>
-			              <input type="text" style="width: 40%;float: left;" class="form-control" id="offPrice" placeholder="线下预约价格">	
+			              <label class="label-style"> 面对面咨询价格</label>
+			              <input type="text" style="width: 40%;float: left;" class="form-control" id="offPrice" placeholder="面对面咨询价格">	
 			              <label style="margin-top: 5px; font-size:16px;font-weight: 500;color: red" >&nbsp;&nbsp;	/小时</label>           		            		            
 			          </div>           
 			        </div>
 			        <!-- 职业背景描述 -->
 			         <div class="form-group">         	
 			          <div class="col-md-12">		          	
-			              <label class="label-style" style="width: 40%; text-align: left; "> 职业背景描述</label>
+			              <label class="label-style" style="width: 40%; text-align: left; "> 职业背景描述（将对外显示）</label>
 			              <textarea style="width: 100%;float: left; height: 160px;" class="form-control" id="docDesp" placeholder="职业背景描述(至少20个字)"></textarea> 
 			                     		            		           
 			          </div>           
@@ -96,7 +151,7 @@ $this->title = 'Register';
 
 			        	<!-- pic 1 -->
 					     <div class="form-group field-uploadform-imagefiles-0">
-						     <label class="control-label" style="margin-left: 20%; margin-top: 30px; font-size: 16px;" for="uploadform-imagefiles-0">请上传两寸免冠照片</label>
+						     <label class="control-label" style="margin-left: 20%; margin-top: 30px; font-size: 16px;" for="uploadform-imagefiles-0">上传头像照片</label>
 						     <input type="hidden"  value="" name="UploadForm[imageFiles][0]">
 						     <input id="uploadform-imagefiles-0"  style="margin-left: 20% !important; " type="file" name="UploadForm[imageFiles][0]" onchange="javascript:headImagePreview();">
 						     <div class="help-block"></div>
@@ -106,7 +161,7 @@ $this->title = 'Register';
 					    
 					    <!-- pic-2 -->
 					    <div class="form-group field-uploadform-imagefiles-1">
-						     <label class="control-label"  style="margin-left: 20%; font-size: 16px;" for="uploadform-imagefiles-1">请上传手医生执业证书照片</label>
+						     <label class="control-label"  style="margin-left: 20%; font-size: 16px;" for="uploadform-imagefiles-1">请上传医生执业证书照片</label>
 						     <input type="hidden" value="" name="UploadForm[imageFiles][1]">
 						     <input id="uploadform-imagefiles-1" style="margin-left: 20% !important;" type="file" name="UploadForm[imageFiles][1]" onchange="javascript:busImagePreview();">
 						     <div class="help-block"></div>
@@ -116,7 +171,7 @@ $this->title = 'Register';
 					     <!-- pic 3 -->
 					      <div style="height: 30px; width: 100%"></div>
 					      <div class="form-group field-uploadform-imagefiles-3">
-						     <label class="control-label"  style="margin-left: 20%; font-size: 16px;" for="uploadform-imagefiles-3">请上传手持身份证照片</label>
+						     <label class="control-label"  style="margin-left: 20%; font-size: 16px;" for="uploadform-imagefiles-3">请上传身份证照片</label>
 						     <input type="hidden" value="" name="UploadForm[imageFiles][3]">
 						     <input id="uploadform-imagefiles-3" style="margin-left: 20% !important;" type="file" name="UploadForm[imageFiles][3]" onchange="javascript:idImagePreview();">
 						     <div class="help-block"></div>
@@ -132,7 +187,7 @@ $this->title = 'Register';
 					<div style="height: 30px; width: 100%;"></div>
 					<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 25%;" onclick="doctorReg();" >立即注册</button></p></div>
 					<div style="height: 100px;"></div>	   
-		      </div>	
+		     </div>	
 		      
 		</div>
 	  
@@ -261,7 +316,7 @@ $this->title = 'Register';
 		function doctorReg($this)
 		{
 
-			alert('doctorLogin');
+			// alert('doctorLogin');
 			var user_type = 1;
 			var docTel = document.getElementById("docTel").value;
 			var vercode = document.getElementById("docVerycode").value;
@@ -383,53 +438,7 @@ $this->title = 'Register';
 	</div>
 
         
-		<div class="swiper-slide" >
-        
-        	<!--固话绑定GO-->
-        	<div class="user_zc_body">
-                
-        		  <h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">用户注册</h3>
-	<!-- <div class="container"> -->
-		<div class="col-md-12" >			
-			<div class="form-horizontal templatemo-create-account templatemo-container">
-				<div class="form-inner">
-					<div class="form-group">
-			          <div class="col-md-12" style="text-align: center;">		          	
-			            <!-- <label for="first_name" class="control-label" style="width: 20%; float: left;line-height: 30px;">用户名:</label> -->
-			            <label class="label-style"> 手机号</label>
-			            <input type="text" style="width: 40%;float: left;" class="form-control" id="userTel" placeholder="请输入手机号">            		            		            
-			          </div>             
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12" style="text-align: center;">		          	
-			             <label class="label-style"> 验证码</label>
-			            <input type="text" style="width: 20%;float: left; margin-right: 20px;" class="form-control" id="userVerycode" placeholder="请输入验证码"> 
-			            <!-- <span class="label-code"> 获取验证码</span>        		            		             -->
-			          	 <input type="button" class="label-code" value="获取验证码" id="btn" onclick="userGetcode(this)">
-			          </div>              
-			        </div>			
-			        <div class="form-group">
-			          <div class="col-md-12">		          	
-			              <label class="label-style"> 密码</label>
-			              <input type="password" style="width: 40%;float: left;" class="form-control" id="userPassword" placeholder="请输入密码">	           		            		            
-			          </div>           
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12">		          	
-			              <label class="label-style"> 确认密码</label>
-			              <input type="password" style="width: 40%;float: left;" class="form-control" id="uconfPassword" placeholder="再次输入密码">	           		            		            
-			          </div>           
-			        </div>
-
-				</div>	
-				  	<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 30%;" onclick="userReg();" >立即注册</button></p></div>
-				   <div style="height: 100px;"></div>		    	
-		      </div>		      
-		</div>
-        
-        </div>
-
-	</div>
+	
 </div>
 </div>
 
@@ -452,7 +461,7 @@ $this->title = 'Register';
 	//普通用户注册
 	function userReg($this)
 	{
-		alert('userReg');
+		// alert('userReg');
 		var user_type = 2;
 		var userTel = document.getElementById("userTel").value;
 		var vercode = document.getElementById("userVerycode").value;
@@ -461,6 +470,8 @@ $this->title = 'Register';
 			alert('验证码错误');
 			return false;
 		}
+		//用户昵称
+		var nickname =  document.getElementById("userNickname").value;
 
 		var userPassword = document.getElementById("userPassword").value;
 		var uconfpassword = document.getElementById("uconfPassword").value;
@@ -477,6 +488,7 @@ $this->title = 'Register';
 		var data={
 		uTel: userTel,
 		uType: user_type,
+		uNickname: nickname,
 		uVerycode: vercode,
 		uPassword: userPassword,
 		};
@@ -576,8 +588,8 @@ pagination: '.my-pagination-ul',
 paginationClickable: true,
 paginationBulletRender: function (index, className) {
 switch (index) {
-  case 0: name='医生注册';break;
-  case 1: name='普通用户';break;
+  case 0: name='普通用户';break;
+  case 1: name='医生注册';break;
   
   default: name='';
 }
@@ -587,7 +599,7 @@ switch (index) {
 </script>
 
 
-<div style="margin-bottom: 200px;">	
+<div style="margin-bottom: 100px;">	
 </div>
 
 

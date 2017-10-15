@@ -6,7 +6,7 @@ $this->title = 'About';
  <link rel="stylesheet" href="css/index/index_new.css" type="text/css">
 
 <div class="container" style="background-color:#EDEDED">
-    <h2  style="color: #69c; text-align: center; margin-top: 40px;">—&nbsp;心理咨询主题列表&nbsp;—</h2>
+    <h2  style="color: #69c; text-align: center; margin-top: 40px;">—&nbsp;说说心事&nbsp;—</h2>
     <div class="index-wrap" >
         <div class="catalog">
             <div class="content">
@@ -22,14 +22,6 @@ $this->title = 'About';
                                     <!-- <a href="<?php //echo Url::to(['site/theme','type'=>'2']); ?>"> -->
                     <h3 style="color:#004b9f; ">情绪压力</h3>
                     <img class="theme-img" src="images/theme_2.jpg" >
-                </a>
-            </div>
-        </div>
-         <div class="catalog">
-            <div class="content">
-                <a href="<?php echo Url::to(['site/theme','type'=>'3','page' => '1']); ?>">
-                    <h3 style="color:#ff6600 ">人际关系</h3>
-                    <img class="theme-img" src="images/theme_1.png" >
                 </a>
             </div>
         </div>
@@ -61,19 +53,27 @@ $this->title = 'About';
          <div class="catalog">
             <div class="content">
                 <a href="<?php echo Url::to(['site/theme','type'=>'7','page' => '1']); ?>">
-                    <h3 style="color:#edc35f ">个人发展</h3>
+                    <h3 style="color:#edc35f ">个人成长</h3>
                     <img class="theme-img" src="images/theme_1.png" >
                 </a>
             </div>
         </div>
-         <div class="catalog">
+        <div class="catalog">
             <div class="content">
                 <a href="<?php echo Url::to(['site/theme','type'=>'8','page' => '1']); ?>">
                     <h3 style="color:#9B30FF ">性心理</h3>
                     <img class="theme-img" src="images/theme_2.jpg" >
                 </a>
+           </div>
+        </div>
+        <div class="catalog">
+            <div class="content">
+                <a href="<?php echo Url::to(['site/theme','type'=>'3','page' => '1']); ?>">
+                    <h3 style="color:#ff6600 ">科普文章</h3>
+                    <img class="theme-img" src="images/theme_1.png" >
+                </a>
             </div>
-    </div>
+        </div>
 </div>
 </div>
  <div class="container">
@@ -82,7 +82,7 @@ $this->title = 'About';
                  <input type="button"  class="consult-button" value="我要咨询" />
             </a>
             <a class="consult" href="<?php echo Url::to(['site/question']);?>">
-                 <input type="button" class="consult-button" style="background-color:#91bd09 " value="我要提问" />
+                 <input type="button" class="consult-button" style="background-color:#91bd09 " value="发布心事" />
             </a>
         <div style="height: 100px; width: 100%;"></div>
 </div>

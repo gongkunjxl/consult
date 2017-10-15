@@ -32,10 +32,9 @@ $nickname = $session->get('nickname');
     <div class="container">
         <!-- mobile nav start -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> -->
             <!-- logo start -->
-            <h1 class="logo"><a class="navbar-brand" href="#"><img src="skin/images/logo.png" alt=" 随州启明网络" title=" 随州启明网络" class="ylw-img-responsive logo-hidden" /><img src="skin/images/blogo.png" alt=" 随州启明网络" title=" 随州启明网络" class="ylw-img-responsive logo-visible" /></a><small class="pull-left"><a href="#" class="visible-lg"></a></small></h1>
-            <!-- <ul class="list-unstyled head-lx"> -->
+          <a class="navbar-brand" href="<?php echo Url::to(['site/index']);?>"><img src="images/logo.png" alt="心事网" title="心事网" class="ylw-img-responsive logo-hidden" style="width: 300px;height: 64px; "/></a>
                  
              <!-- 需要申请QQ接口 -->
               <!--   <li class="tel">全国服务： 138-8686-1003</li>
@@ -53,10 +52,10 @@ $nickname = $session->get('nickname');
         <?php
 
         $menuItems = [
-            ['label' => Yii::t('app', '网站首页').' <small>Home</small>' , 'url' => ['site/index'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
-            ['label' => Yii::t('app', '公益解答').' <small>Service</small>', 'url' => ['site/service'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
-            ['label' => Yii::t('app', '电话倾诉').' <small>Telephone</small>', 'url' => ['site/telephone'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
-            ['label' => Yii::t('app', '专家入驻').' <small>Experts</small>', 'url' => ['site/getexpert'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
+            ['label' => Yii::t('app', '&nbsp;&nbsp;首&nbsp;&nbsp;页&nbsp;&nbsp;').' <small>Home</small>' , 'url' => ['site/index'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
+            ['label' => Yii::t('app', '我的帖子').' <small>Service</small>', 'url' => ['site/service'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
+            // ['label' => Yii::t('app', '电话倾诉').' <small>Telephone</small>', 'url' => ['site/telephone'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
+            // ['label' => Yii::t('app', '专家入驻').' <small>Experts</small>', 'url' => ['site/getexpert'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
 
             // ['label' => Yii::t('app', '合作保障').' <small>Cooperate</small>', 'url' => ['product/index'], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
             // ['label' => Yii::t('app', '关于我们').' <small>About</small>', 'url' => ['page/view','id'=>1], 'options'=>['class'=>'dropdown'], 'linkOptions' => ['class'=>'dropdown-toggle'],],
@@ -106,21 +105,27 @@ $nickname = $session->get('nickname');
 <div class="footer" id="yy">
     <footer class="container">
         <div class="row">
-            <div style="width: 50%; text-align: center; float: left;">
-                <h3>客服微信二维码</h3>
-                <p style="text-align: center">  <img src="images/weixin.jpg"
-                     alt="" title=""
-                     class="ylw-img-responsive"/><br>
-               微信扫一扫</p>
+              <div style="width: 33%; text-align: center; float: left;">
+                <h3 >微信公众号</h3>
+                <img src="images/gongzhonghao.png"  style="width: 150px;height: 150px;" />
+
+               <p> <br>关注我们的公众号，更多心理学文章</p>
+             </div>
+            <div style="width: 33%; text-align: center; float: left;">
+                <h3 > 客服微信二维码</h3>
+                <img src="images/kefu.png"  style="width: 150px;height: 150px;" />
+
+               <p> <br>7×24小时为您服务 心心</p>
             </div>
-            <div style="width: 50%; text-align: center; float: right;">
-                <h3>联系我们 Contact US</h3>
-                <address class="address">
+            
+            <div style="width: 33%; text-align: center; float: right;">
+                <h3>联系我们</h3>
+                <address class="address" style="font-size: 14px;">
                     <ul class="list-unstyled">
-                        <li>中国 · 湖北 · 随州</li>
-                        <li> 0722-380**** </li>
-                        <li>  138-8686-1003</li>
-                        <li>ncplum@qq.com</li>
+                        <li> 手机：15901023228 </li>
+                        <li> 微信：197238405 </li>
+                        <li> 邮箱：srzmiss@126.com </li>
+                        
                        <!--  <li class="sns"><a href="#" title="官方微博" target="_blank"><img src="/skin/images/weibo.png"
                                                                                       width="18" height="18"
                                                                                       alt="微博"></a> <a href="#"

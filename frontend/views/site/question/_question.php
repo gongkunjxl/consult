@@ -12,7 +12,7 @@ $this->title = '发布话题';
 <link rel="stylesheet" type="text/css" href="css/post.css">
 
     <div class="basic-grey">
-        <h1>情感问答话题发布</h1>
+        <h1>发布心事</h1>
         <label>
             <span>标题:</span>
             <input class="title" id="art_title" type="text" placeholder="请输入提问标题" />
@@ -21,15 +21,15 @@ $this->title = '发布话题';
         <div style="height: 10px;width: 100%;"></div>
         <!-- 主题选择 -->
          <label>
-            <span>情感主题</span>
+            <span>心事主题</span>
             <select name="selection" id="art_theme">
                 <option value="1" selected = "selected">情感婚姻</option>
                 <option value="2">情绪压力</option>
-                <option value="3">人际关系</option>
+                <option value="3">科普文章</option>
                 <option value="4">家庭关系</option>
                 <option value="5">孩子教育</option>
                 <option value="6">职业发展</option>
-                <option value="7">个人发展</option>
+                <option value="7">个人成长</option>
                 <option value="8">性心理</option>
             </select>
         </label>

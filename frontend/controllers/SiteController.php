@@ -141,10 +141,17 @@ class SiteController extends Controller
             ];
             //普通用户
             if($uType==2){
+                $uNickname = explode(":", $data['uNickname']);
+                $uNickname = $uNickname[0];
+
                 $db = Yii::$app->db;   
                 // $time = strtotime(date('Y-m-d',time()).' 00:00:00');
                 $time = time();
-                $nickname = "user_".$uVerycode;
+                if(empty($uNickname)){
+                     $nickname = "user_".$uVerycode;
+                 }else{
+                    $nickname=$uNickname;
+                 }
                 $insert_data = [
                     'username' => $uTel,
                     'password' => $uPassword,
@@ -630,6 +637,7 @@ class SiteController extends Controller
 
         $db= Yii::$app->db;
         $start = (intval($page[1])-1)*10;
+        if($start<0) $start=0;
         $sel_sql = "SELECT * FROM con_user where user_type=1 order by prt desc LIMIT $start,10 ";
         $getinfo = Yii::$app->db->createCommand($sel_sql)->queryAll();
         if(!empty($getinfo)){
