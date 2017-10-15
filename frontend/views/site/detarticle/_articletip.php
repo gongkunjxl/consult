@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 $session = Yii::$app->session;
 $user_name = $session->get('username');
 $user_id =   $session->get('userId');
-$this->title = 'article list';
+// $this->title = 'article list';
 ?>
 <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
 <?php ActiveForm::end() ?>
@@ -105,7 +105,7 @@ $this->title = 'article list';
                            cursor: default;
                        }
                    </style>
-                   <button id="my-commit" onclick="tipSubmit();">提交</button>
+                   <button id="my-commit" class="tmp_button" onclick="tipSubmit();">提交</button>
             </div>
     </div>
 </div>

@@ -412,9 +412,9 @@ dl, dt, dd{
   position: relative;
   color: #fff; 
   line-height: 20px;
-  font-size: 30px;
-  width: 200px;
-  height: 60px;
+  font-size: 1.5em;
+  width: 120px;
+  height: 2em;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;

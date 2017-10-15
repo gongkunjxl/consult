@@ -1,13 +1,13 @@
 <?php
 use yii\helpers\Html;
 use  yii\helpers\Url;
-$this->title = 'Theme';
+// $this->title = 'Theme';
 $length=0;
 ?>
 
-<link href="css/theme/theme.css" rel="stylesheet" type="text/css">
+<link href="css/theme.css" rel="stylesheet" type="text/css">
 
-<div class="questions index questions_index chrome modern mac webkit desktop">
+<div class="questions index questions_index chrome modern mac webkit desktop" style="width: 100% !important">
   <div class="container">
         <div class="col_main">
         <?php if($data['status'] == 200):?>

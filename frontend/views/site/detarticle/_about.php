@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use  yii\helpers\Url;
-$this->title = 'About';
+// $this->title = 'About';
 ?>
 <div class="about">
     <article class="container text-center">

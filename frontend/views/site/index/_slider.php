@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use  yii\helpers\Url;
-$this->title = 'About';
+// $this->title = 'About';
 ?>
 <!-- banner start -->
 <div class="banner text-center">

@@ -14,7 +14,7 @@ $base = "'".$base."'";
 <div class="container">
     <div style="width: 100%;height: 80px;">
         <span> 专家搜索:</span> 
-        <input type="text" name="expertName" id="expertName" style="width: 200px;height: 30px;"  placeholder="请输入专家姓名">
+        <input type="text" name="expertName" id="expertName" style="width: 120px;height: 30px;"  placeholder="请输入专家姓名">
         <button  onclick="getExpert();" style="width: 100px;background-color: #CAE1FF;border-radius: 6px;border: 1px solid #CAE1FF; font-weight: 500px; color: #FF7F24">搜 索</button>
     </div>
     <div class="expert-main" >
@@ -46,13 +46,16 @@ $base = "'".$base."'";
                     <div class="score">
                         <span>评分:&nbsp;&nbsp;<?php echo $data['getinfo'][$i]['score']; ?>分&nbsp;&nbsp;</span>
                     </div>
-                    <input class="btn" type="button" onClick="consultToggle()" name="" value="立即预约">
                     <div class="price">
                          <span>&nbsp;&nbsp;线上预约价格:&nbsp;&nbsp;<?php echo $data['getinfo'][$i]['onPrice']; ?>/小时</span>
                     </div>
                     <div class="price">
                          <span>&nbsp;&nbsp;线下预约价格:&nbsp;&nbsp;<?php echo $data['getinfo'][$i]['offPrice']; ?>/小时</span>
                     </div>
+                    <div class="tmp_btn">
+                        <input class="btn" type="button" onClick="consultToggle()" name="" value="立即预约">
+                    </div>
+                    
                 </div>
         <?php }else:?>
             <p style="font-size: 30px; text-align: center;color: red">没有更多专家了！</p>

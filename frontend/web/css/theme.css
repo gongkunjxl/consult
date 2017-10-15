@@ -108,7 +108,7 @@ a.speak i {
 
 @media (max-width: 700px) {
   .container {
-    max-width: 350px;
+    max-width: 100%;
   }
 
   .mymoney table {

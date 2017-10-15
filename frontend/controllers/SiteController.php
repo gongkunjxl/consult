@@ -382,6 +382,9 @@ class SiteController extends Controller
             //数据库查询
             $db = Yii::$app->db;
             $start = (intval($page[1])-1)*10;
+            if($start<0){
+                $start=0;
+            }
             $sel_sql = "SELECT * FROM con_article where themeId=$type[1]  ORDER BY ctime LIMIT $start,10";
             $getinfo =  $db->createCommand($sel_sql)->queryAll();  
 

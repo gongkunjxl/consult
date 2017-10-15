@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-$this->title = '提问页面';
+$this->title = '发布心事';
 ?>
 
 <div style="width:100%; height: 50px;"></div>

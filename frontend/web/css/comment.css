@@ -22,7 +22,7 @@ body {
 
 @media (max-width: 700px) {
   .container {
-    max-width: 350px;
+    max-width: 100%;
   }
 
   .mymoney table {
@@ -410,7 +410,7 @@ body {
 
 .box .actions a, .box .actions button, .box .actions .button {
   display: block;
-  width: 100%;
+  /*width: 100%;*/
   margin-bottom: 1em;
   line-height: 1;
   color: #747474;
@@ -1160,24 +1160,6 @@ body {
 
 
 @media (max-width: 700px) {
-  .footer .item {
-    float: none;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: #999
-  }
-
-  .footer h5 {
-    color: #00a2ff;
-  }
-
-  .footer {
-    background: #f7f7f7;
-    margin-bottom: 0;
-  }
-
   .questions_index.footer {
     margin-bottom: 65px
   }
@@ -1323,7 +1305,7 @@ input, textarea {
   margin-top: 0
 }
 
-button, .button {
+.tmp_button {
   display: inline-block;
   text-align: center;
   background: #00a2ff;

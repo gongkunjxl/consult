@@ -47,6 +47,27 @@
 	-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
 	border-radius: 5px;
 }
+@media (max-width: 700px) {
+	.basic-grey .title{
+	border: 1px solid #DADADA;
+	color: #888;
+	height: 40px;
+	margin-bottom: 16px;
+	margin-right: 6px;
+	margin-top: 2px;
+	outline: 0 none;
+	padding: 3px 3px 3px 5px;
+	width: 200px;
+	font-size: 14px;
+	line-height:15px;
+	font-weight: 300;
+	box-shadow: inset 0px 1px 4px #ECECEC;
+	-moz-box-shadow: inset 0px 1px 4px #ECECEC;
+	-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+	border-radius: 5px;
+}
+}
+
 .basic-grey select {
 	border: 1px solid #DADADA;
 	color: #888;
@@ -84,6 +105,26 @@
 	-moz-box-shadow: inset 0px 1px 4px #ECECEC;
 	-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
 	border-radius: 5px;
+}
+@media (max-width: 700px) {
+	.basic-grey textarea {
+	border: 1px solid #DADADA;
+	color: #888;
+	height: 40px;
+	margin-bottom: 16px;
+	margin-right: 6px;
+	margin-top: 2px;
+	outline: 0 none;
+	padding: 3px 3px 3px 5px;
+	width: 200px;
+	font-size: 14px;
+	line-height:15px;
+	font-weight: 300;
+	box-shadow: inset 0px 1px 4px #ECECEC;
+	-moz-box-shadow: inset 0px 1px 4px #ECECEC;
+	-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+	border-radius: 5px;
+}
 }
 
 .basic-grey textarea{

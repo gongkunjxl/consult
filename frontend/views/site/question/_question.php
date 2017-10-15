@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 $session = Yii::$app->session;
 $user_name = $session->get('username');
 $user_id = $session->get('userId');
-$this->title = '发布话题';
+// $this->title = '发布话题';
 ?>
 <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
     <?php ActiveForm::end() ?>
@@ -25,12 +25,12 @@ $this->title = '发布话题';
             <select name="selection" id="art_theme">
                 <option value="1" selected = "selected">情感婚姻</option>
                 <option value="2">情绪压力</option>
-                <option value="3">科普文章</option>
-                <option value="4">家庭关系</option>
-                <option value="5">孩子教育</option>
-                <option value="6">职业发展</option>
-                <option value="7">个人成长</option>
-                <option value="8">性心理</option>
+                <option value="3">家庭关系</option>
+                <option value="4">孩子教育</option>
+                <option value="5">职业发展</option>
+                <option value="6">个人成长</option>
+                <option value="7">性心理</option>
+                <option value="8">科普文章</option>
             </select>
         </label>
         <div style="height: 20px;width: 100%"></div>
@@ -41,8 +41,8 @@ $this->title = '发布话题';
         </label>
        
         <div style="height: 20px;width: 100%"></div>
-        <label>
-        <span>&nbsp;</span>
+        <label style="margin-left: 20%">
+       <!--  <span>&nbsp;</span> -->
         <input type="button" class="button" onclick="tipQuestion();" value="发布帖子" />
         </label>
     </div>

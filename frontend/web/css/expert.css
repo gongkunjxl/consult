@@ -31,6 +31,23 @@
 	border:1.5px solid #edefef;
 
 }
+@media(max-width: 700px)
+{
+	.expert-main .expert
+	{
+	margin-right: 50px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 60px;
+	position: relative;
+	float: left;
+	/*background-color: #ECFCFC;*/
+
+	border:1.5px solid #edefef;
+
+	}
+}
+
 /* img picture*/
 .expert-main .expert img{
 	position: relative;
@@ -84,11 +101,34 @@
 	/*font-size: 16px;*/
 	color: #f60;
 }
-
-.expert-main .expert .btn{
+@media(max-width: 700px)
+{
+	.expert-main .expert .score{
+		position: relative;
+		float: left;
+		width: 200px;
+		margin-left: 20px;
+		height: auto;
+		margin-top: auto;
+		margin-right: auto;
+		background-color: #fff;
+    }
+	.expert-main .expert .score span{
+		width: 100%;
+		font-weight: 500;
+		/*font-size: 16px;*/
+		color: #f60;
+	}
+}
+.expert-main .expert .tmp_btn
+{
 	width: 160px;
 	height: 40px;
-	margin-top: 25px;
+	/*float: left;*/
+}
+.expert-main .expert .tmp_btn .btn{
+
+	/*margin-top: 25px;*/
 	float: left;
 	margin-left: 20px;
 	text-align: center;
@@ -108,10 +148,34 @@
 }
 .expert-main .expert .price span{
 	width: 100%;
+	float: right;
 	font-weight: 500;
 	color: #e60;
 }
+@media(max-width: 700px)
+{
+	.expert-main .expert .tmp_btn .btn{
+		margin-bottom: 20px;
+	}
 
+	.expert-main .expert .price{
+		position: relative;
+		margin-left: 10px;
+		width: 270px;
+		float: left;
+		/*margin-top: 10px;*/
+		margin-right: 20px;
+
+		background-color: #fff;
+	}
+	.expert-main .expert .price span{
+		width: 100%;
+		float: right;
+		font-weight: 500;
+		color: #e60;
+	}
+
+}
 
 
 

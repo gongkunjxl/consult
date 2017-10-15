@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use  yii\helpers\Url;
 use yii\widgets\ActiveForm;
-$this->title = 'Login';
+$this->title = '登陆页面';
 ?>
 
 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -55,7 +55,7 @@ $this->title = 'Login';
 		  </div>
 </div>
 
-	<a href="<?php echo Url::to(['site/message']); ?>" style="width: 20%;" class="btn btn-info" "> 登陆</a>
+	<!-- <a href="<?php// echo Url::to(['site/message']); ?>" style="width: 20%;" class="btn btn-info" "> 登陆</a> -->
 
 <script type="text/javascript">
 	function userLogin()

@@ -18,7 +18,7 @@ $this->title = 'Register';
 	<!-- 增加注册css -->
 	<link href="css/login.css" rel="stylesheet" type="text/css">	
 
-<div class="swiper-container" style="width: 70%; margin-top: 130px !important;">
+<div class="swiper-container swiper-width" >
 	<div class="my-pagination"><ul class="my-pagination-ul"></ul></div>
 	<div class="swiper-wrapper">
 
@@ -35,13 +35,13 @@ $this->title = 'Register';
 			          <div class="col-md-12" style="text-align: center;">		          	
 			            <!-- <label for="first_name" class="control-label" style="width: 20%; float: left;line-height: 30px;">用户名:</label> -->
 			            <label class="label-style"> 手机号</label>
-			            <input type="text" style="width: 40%;float: left;" class="form-control" id="userTel" placeholder="请输入手机号">            		            		            
+			            <input type="text" class="form-control text-width" id="userTel" placeholder="请输入手机号">            		            		            
 			          </div>             
 			        </div>
 			        <div class="form-group">
 			          <div class="col-md-12" style="text-align: center;">		          	
 			             <label class="label-style"> 验证码</label>
-			            <input type="text" style="width: 20%;float: left; margin-right: 20px;" class="form-control" id="userVerycode" placeholder="请输入验证码"> 
+			            <input type="text" class="form-control text-code" id="userVerycode" placeholder="请输入验证码"> 
 			            <!-- <span class="label-code"> 获取验证码</span>        		            		             -->
 			          	 <input type="button" class="label-code" value="获取验证码" id="btn" onclick="userGetcode(this)">
 			          </div>              
@@ -49,19 +49,19 @@ $this->title = 'Register';
 			         <div class="form-group">
 			          <div class="col-md-12" style="text-align: center;">		          	
 			             <label class="label-style"> 昵称:</label>
-			            <input type="text" style="width: 40%;float: left;" class="form-control" id="userNickname" placeholder="请输入昵称">     
+			            <input type="text"  class="form-control text-width" id="userNickname" placeholder="请输入昵称">     
 			          </div>              
 			        </div>			
 			        <div class="form-group">
 			          <div class="col-md-12">		          	
 			              <label class="label-style"> 密码</label>
-			              <input type="password" style="width: 40%;float: left;" class="form-control" id="userPassword" placeholder="请输入密码">	           		            		            
+			              <input type="password" class="form-control text-width" id="userPassword" placeholder="请输入密码">	           		            		            
 			          </div>           
 			        </div>
 			        <div class="form-group">
 			          <div class="col-md-12">		          	
 			              <label class="label-style"> 确认密码</label>
-			              <input type="password" style="width: 40%;float: left;" class="form-control" id="uconfPassword" placeholder="再次输入密码">	           		            		            
+			              <input type="password" class="form-control text-width" id="uconfPassword" placeholder="再次输入密码">	           		            		            
 			          </div>           
 			        </div>
 
@@ -88,13 +88,13 @@ $this->title = 'Register';
 			          <div class="col-md-12" style="text-align: center;">		          	
 			            <!-- <label for="first_name" class="control-label" style="width: 20%; float: left;line-height: 30px;">用户名:</label> -->
 			            <label class="label-style"> 手机号</label>
-			            <input type="text" style="width: 40%;float: left;" class="form-control" id="docTel" onchange="regPhone();" placeholder="请输入手机号">            		            		            
+			            <input type="text" class="form-control text-width" id="docTel" onchange="regPhone();" placeholder="请输入手机号">            		            		            
 			          </div>             
 			        </div>
 			        <div class="form-group">
 			          <div class="col-md-12" style="text-align: center;">		          	
 			             <label class="label-style"> 验证码</label>
-			            <input type="text" style="width: 20%;float: left; margin-right: 20px;" class="form-control" id="docVerycode" placeholder="请输入验证码"> 
+			            <input type="text" class="form-control text-code" id="docVerycode" placeholder="请输入验证码"> 
 			            <!-- <button class="label-code"  id="docCode" onclick="settime(this)"> 获取验证码</button>        		               -->
 			            <input type="button" class="label-code" value="获取验证码" id="btn" onclick="docGetcode(this)">
 			          </div>              
@@ -102,45 +102,45 @@ $this->title = 'Register';
 			        <div class="form-group">
 			          <div class="col-md-12">		          	
 			              <label class="label-style"> 密码</label>
-			              <input type="password" style="width: 40%;float: left;" class="form-control" id="docPassword" placeholder="请输入密码">	           		            		            
+			              <input class="form-control text-width" id="docPassword" placeholder="请输入密码">	           		            		            
 			          </div>           
 			        </div>
 			        <div class="form-group">
 			          <div class="col-md-12">		          	
 			              <label class="label-style"> 确认密码</label>
-			              <input type="password" style="width: 40%;float: left;" class="form-control" id="confPassword" placeholder="再次输入密码">	           		            		            
+			              <input class="form-control text-width" id="confPassword text-width" placeholder="再次输入密码">	           		            		            
 			          </div>           
 			        </div>
 			         <div class="form-group">
 			          <div class="col-md-12">		          	
 			              <label class="label-style"> 姓名</label>
-			              <input type="text" style="width: 40%;float: left;" class="form-control" id="docName" placeholder="请输入真实姓名(必填)">	           		            		            
+			              <input  class="form-control text-width" id="docName" placeholder="请输入真实姓名(必填)">	           		            		            
 			          </div>           
 			        </div>
 			        <div class="form-group">
 			          <div class="col-md-12">		          	
 			              <label class="label-style"> 微信号</label>
-			              <input type="text" style="width: 40%;float: left;" class="form-control" id="docWeixin" placeholder="请输入微信号(必填)">	           		            		            
+			              <input class="form-control text-width" id="docWeixin" placeholder="请输入微信号(必填)">	           		            		            
 			          </div>           
 			        </div>
 			         <div class="form-group">
 			          <div class="col-md-12">		          	
-			              <label class="label-style" style="font-size: 14px;">电话/视频咨询价格</label>
-			              <input type="text" style="width: 40%;float: left;" class="form-control" id="onPrice" placeholder="电话/视频咨询价格">	
-			              <label style="margin-top: 5px; font-size:16px;font-weight: 500;color: red" >&nbsp;&nbsp;	/小时</label>           		            		            
+			              <label class="label-style">电话/视频咨询价格</label>
+			              <input class="form-control text-width" id="onPrice" placeholder="电话/视频咨询价格">	
+			              <label style="margin-top: 5px; width: 40px; font-size:0.8vw;font-weight: 500;color: red" >&nbsp;&nbsp;/小时</label>           		            		            
 			          </div>           
 			        </div>
 			         <div class="form-group">
 			          <div class="col-md-12">		          	
 			              <label class="label-style"> 面对面咨询价格</label>
-			              <input type="text" style="width: 40%;float: left;" class="form-control" id="offPrice" placeholder="面对面咨询价格">	
-			              <label style="margin-top: 5px; font-size:16px;font-weight: 500;color: red" >&nbsp;&nbsp;	/小时</label>           		            		            
+			              <input type="text" class="form-control text-width" id="offPrice" placeholder="面对面咨询价格">	
+			              <label style="margin-top: 5px; width: 40px; font-size:0.8vw;font-weight: 500;color: red">&nbsp;&nbsp;/小时</label>           		            		            
 			          </div>           
 			        </div>
 			        <!-- 职业背景描述 -->
 			         <div class="form-group">         	
 			          <div class="col-md-12">		          	
-			              <label class="label-style" style="width: 40%; text-align: left; "> 职业背景描述（将对外显示）</label>
+			              <label class="label-style" style="width: 200px; text-align: left;" > 职业背景描述（将对外显示）</label>
 			              <textarea style="width: 100%;float: left; height: 160px;" class="form-control" id="docDesp" placeholder="职业背景描述(至少20个字)"></textarea> 
 			                     		            		           
 			          </div>           
