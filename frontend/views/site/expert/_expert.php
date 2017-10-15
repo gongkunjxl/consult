@@ -106,10 +106,10 @@ $base = "'".$base."'";
         <div class="shang_box">
             <a class="shang_close" href="javascript:void(0)" onClick="consultToggle()" title="关闭"><img src="images/close.jpg" alt="取消" /></a>
             <div class="shang_tit">
-                <p>客服微信号:gongkun2014</p>
+                <p>客服微信号:197238405</p>
             </div>
             <div class="shang_payimg" style="padding: 0;">
-                <img src="images/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                <img src="images/kefu.png" alt="扫码支持" title="扫一扫" />
             </div>
                 <div class="pay_explain">扫码关注 预约咨询</div>
         </div>
