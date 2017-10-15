@@ -61,7 +61,7 @@ $base = "'".$base."'";
             <p style="font-size: 30px; text-align: center;color: red">没有更多专家了！</p>
         <?php endif;?>
     <?php else: ?>
-        <p style="font-size: 30px; text-align: center;color: red">没有找到该专家！</p>
+        <p style="font-size: 30px; text-align: center;color: red">没有更多专家了！</p>
     <?php endif; ?>
 
             <div style="margin-top: 20px;">
