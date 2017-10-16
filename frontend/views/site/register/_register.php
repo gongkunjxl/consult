@@ -20,62 +20,6 @@ $this->title = 'Register';
 
 <div class="swiper-container swiper-width" >
 	<div class="my-pagination"><ul class="my-pagination-ul"></ul></div>
-	<div class="swiper-wrapper" id="swiperId" style="height: 500px;">
-
-		<!-- 普通用户的注册 -->
-	    	<div class="swiper-slide"  >
-	        	<div class="user_zc_body">
-	                
-	        		  <h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">用户注册</h3>
-		<!-- <div class="container"> -->
-			<div class="col-md-12" >			
-				<div class="form-horizontal templatemo-create-account templatemo-container">
-					<div class="form-inner">
-						<div class="form-group">
-				          <div class="col-md-12" style="text-align: center;">		          	
-				            <!-- <label for="first_name" class="control-label" style="width: 20%; float: left;line-height: 30px;">用户名:</label> -->
-				            <label class="label-style label-size"> 手机号</label>
-				            <input type="text" class="form-control text-width" id="userTel" placeholder="请输入手机号">            		            		            
-				          </div>             
-				        </div>
-				        <div class="form-group">
-				          <div class="col-md-12" style="text-align: center;">		          	
-				             <label class="label-style label-size"> 验证码</label>
-				            <input type="text" class="form-control text-code" id="userVerycode" placeholder="请输入验证码"> 
-				            <!-- <span class="label-code"> 获取验证码</span>        		            		             -->
-				          	 <input type="button" class="label-code" value="获取验证码" id="btn" onclick="userGetcode(this)">
-				          </div>              
-				        </div>	
-				         <div class="form-group">
-				          <div class="col-md-12" style="text-align: center;">		          	
-				             <label class="label-style label-size"> 昵称:</label>
-				            <input type="text"  class="form-control text-width" id="userNickname" placeholder="请输入昵称">     
-				          </div>              
-				        </div>			
-				        <div class="form-group">
-				          <div class="col-md-12">		          	
-				              <label class="label-style label-size"> 密码</label>
-				              <input type="password" class="form-control text-width" id="userPassword" placeholder="请输入密码">	           		            		            
-				          </div>           
-				        </div>
-				        <div class="form-group">
-				          <div class="col-md-12">		          	
-				              <label class="label-style label-size"> 确认密码</label>
-				              <input type="password" class="form-control text-width" id="uconfPassword" placeholder="再次输入密码">	           		            		            
-				          </div>           
-				        </div>
-
-					</div>	
-					  	<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 30%;" onclick="userReg();" >立即注册</button></p></div>
-					   <div style="height: 100px;"></div>		    	
-			      </div>		      
-			</div>
-	        
-	        </div>
-
-		</div>
-
-	<!-- 医生注册 -->
 
 		
 	</div>
