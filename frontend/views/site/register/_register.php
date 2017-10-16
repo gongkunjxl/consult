@@ -12,7 +12,7 @@ $this->title = 'Register';
 	<!-- <link href="swiper/public.css" rel="stylesheet" type="text/css"><!--默认共用样式--> 
 	<link rel="stylesheet" href="swiper/swiper.min.css">
 	<script src="swiper/swiper.min.js" type="text/javascript"></script>
-	<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+	<!-- <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script> -->
 
 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
@@ -583,12 +583,12 @@ $this->title = 'Register';
 
 
 <script> 
-	alert("fuck");
+	// alert("fuck");
 	var mySwiper = new Swiper('.swiper-container',{
 	pagination: '.my-pagination-ul',
 	paginationClickable: true,
 	paginationBulletRender: function (index, className) {
-		alert("help");
+		// alert("help");
 	switch (index) {
 	  case 0: name='普通用户';break;
 	  case 1: name='医生注册';break;
