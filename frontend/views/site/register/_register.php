@@ -20,60 +20,60 @@ $this->title = 'Register';
 
 <div class="swiper-container swiper-width" >
 	<div class="my-pagination"><ul class="my-pagination-ul"></ul></div>
-	<div class="swiper-wrapper">
+	<div class="swiper-wrapper" id="swiperId" style="height: 500px;">
 
 		<!-- 普通用户的注册 -->
-    	<div class="swiper-slide" >
-        	<div class="user_zc_body">
-                
-        		  <h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">用户注册</h3>
-	<!-- <div class="container"> -->
-		<div class="col-md-12" >			
-			<div class="form-horizontal templatemo-create-account templatemo-container">
-				<div class="form-inner">
-					<div class="form-group">
-			          <div class="col-md-12" style="text-align: center;">		          	
-			            <!-- <label for="first_name" class="control-label" style="width: 20%; float: left;line-height: 30px;">用户名:</label> -->
-			            <label class="label-style"> 手机号</label>
-			            <input type="text" class="form-control text-width" id="userTel" placeholder="请输入手机号">            		            		            
-			          </div>             
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12" style="text-align: center;">		          	
-			             <label class="label-style"> 验证码</label>
-			            <input type="text" class="form-control text-code" id="userVerycode" placeholder="请输入验证码"> 
-			            <!-- <span class="label-code"> 获取验证码</span>        		            		             -->
-			          	 <input type="button" class="label-code" value="获取验证码" id="btn" onclick="userGetcode(this)">
-			          </div>              
-			        </div>	
-			         <div class="form-group">
-			          <div class="col-md-12" style="text-align: center;">		          	
-			             <label class="label-style"> 昵称:</label>
-			            <input type="text"  class="form-control text-width" id="userNickname" placeholder="请输入昵称">     
-			          </div>              
-			        </div>			
-			        <div class="form-group">
-			          <div class="col-md-12">		          	
-			              <label class="label-style"> 密码</label>
-			              <input type="password" class="form-control text-width" id="userPassword" placeholder="请输入密码">	           		            		            
-			          </div>           
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12">		          	
-			              <label class="label-style"> 确认密码</label>
-			              <input type="password" class="form-control text-width" id="uconfPassword" placeholder="再次输入密码">	           		            		            
-			          </div>           
-			        </div>
+	    	<div class="swiper-slide"  >
+	        	<div class="user_zc_body">
+	                
+	        		  <h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">用户注册</h3>
+		<!-- <div class="container"> -->
+			<div class="col-md-12" >			
+				<div class="form-horizontal templatemo-create-account templatemo-container">
+					<div class="form-inner">
+						<div class="form-group">
+				          <div class="col-md-12" style="text-align: center;">		          	
+				            <!-- <label for="first_name" class="control-label" style="width: 20%; float: left;line-height: 30px;">用户名:</label> -->
+				            <label class="label-style"> 手机号</label>
+				            <input type="text" class="form-control text-width" id="userTel" placeholder="请输入手机号">            		            		            
+				          </div>             
+				        </div>
+				        <div class="form-group">
+				          <div class="col-md-12" style="text-align: center;">		          	
+				             <label class="label-style"> 验证码</label>
+				            <input type="text" class="form-control text-code" id="userVerycode" placeholder="请输入验证码"> 
+				            <!-- <span class="label-code"> 获取验证码</span>        		            		             -->
+				          	 <input type="button" class="label-code" value="获取验证码" id="btn" onclick="userGetcode(this)">
+				          </div>              
+				        </div>	
+				         <div class="form-group">
+				          <div class="col-md-12" style="text-align: center;">		          	
+				             <label class="label-style"> 昵称:</label>
+				            <input type="text"  class="form-control text-width" id="userNickname" placeholder="请输入昵称">     
+				          </div>              
+				        </div>			
+				        <div class="form-group">
+				          <div class="col-md-12">		          	
+				              <label class="label-style"> 密码</label>
+				              <input type="password" class="form-control text-width" id="userPassword" placeholder="请输入密码">	           		            		            
+				          </div>           
+				        </div>
+				        <div class="form-group">
+				          <div class="col-md-12">		          	
+				              <label class="label-style"> 确认密码</label>
+				              <input type="password" class="form-control text-width" id="uconfPassword" placeholder="再次输入密码">	           		            		            
+				          </div>           
+				        </div>
 
-				</div>	
-				  	<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 30%;" onclick="userReg();" >立即注册</button></p></div>
-				   <div style="height: 100px;"></div>		    	
-		      </div>		      
+					</div>	
+					  	<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 30%;" onclick="userReg();" >立即注册</button></p></div>
+					   <div style="height: 100px;"></div>		    	
+			      </div>		      
+			</div>
+	        
+	        </div>
+
 		</div>
-        
-        </div>
-
-	</div>
 
 	<!-- 医生注册 -->
 
@@ -81,115 +81,115 @@ $this->title = 'Register';
 			<div class="user_zc_body">
 				  <h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">医生注册</h3>
 	<!-- <div class="container"> -->
-		<div class="col-md-12">			
-			<div class="form-horizontal templatemo-create-account templatemo-container" >
-				<div class="form-inner">
-					<div class="form-group">
-			          <div class="col-md-12" style="text-align: center;">		          	
-			            <!-- <label for="first_name" class="control-label" style="width: 20%; float: left;line-height: 30px;">用户名:</label> -->
-			            <label class="label-style"> 手机号</label>
-			            <input type="text" class="form-control text-width" id="docTel" onchange="regPhone();" placeholder="请输入手机号">            		            		            
-			          </div>             
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12" style="text-align: center;">		          	
-			             <label class="label-style"> 验证码</label>
-			            <input type="text" class="form-control text-code" id="docVerycode" placeholder="请输入验证码"> 
-			            <!-- <button class="label-code"  id="docCode" onclick="settime(this)"> 获取验证码</button>        		               -->
-			            <input type="button" class="label-code" value="获取验证码" id="btn" onclick="docGetcode(this)">
-			          </div>              
-			        </div>			
-			        <div class="form-group">
-			          <div class="col-md-12">		          	
-			              <label class="label-style"> 密码</label>
-			              <input type="password" class="form-control text-width" id="docPassword" placeholder="请输入密码">	           		            		            
-			          </div>           
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12">		          	
-			              <label class="label-style"> 确认密码</label>
-			              <input type="password" class="form-control text-width" id="confPassword" placeholder="再次输入密码">	           		            		            
-			          </div>           
-			        </div>
-			         <div class="form-group">
-			          <div class="col-md-12">		          	
-			              <label class="label-style"> 姓名</label>
-			              <input  class="form-control text-width" id="docName" placeholder="请输入真实姓名(必填)">	           		            		            
-			          </div>           
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12">		          	
-			              <label class="label-style"> 微信号</label>
-			              <input class="form-control text-width" id="docWeixin" placeholder="请输入微信号(必填)">	           		            		            
-			          </div>           
-			        </div>
-			         <div class="form-group">
-			          <div class="col-md-12">		          	
-			              <label class="label-style">电话/视频咨询价格</label>
-			              <input class="form-control text-width" id="onPrice" placeholder="电话/视频咨询价格">	
-			              <label style="margin-top: 5px; width: 40px; font-size:0.8vw;font-weight: 500;color: red" >&nbsp;&nbsp;/小时</label>           		            		            
-			          </div>           
-			        </div>
-			         <div class="form-group">
-			          <div class="col-md-12">		          	
-			              <label class="label-style"> 面对面咨询价格</label>
-			              <input type="text" class="form-control text-width" id="offPrice" placeholder="面对面咨询价格">	
-			              <label style="margin-top: 5px; width: 40px; font-size:0.8vw;font-weight: 500;color: red">&nbsp;&nbsp;/小时</label>           		            		            
-			          </div>           
-			        </div>
-			        <!-- 职业背景描述 -->
-			         <div class="form-group">         	
-			          <div class="col-md-12">		          	
-			              <label class="label-style" style="width: 200px; text-align: left;" > 职业背景描述（将对外显示）</label>
-			              <textarea style="width: 100%;float: left; height: 160px;" class="form-control" id="docDesp" placeholder="职业背景描述(至少20个字)"></textarea> 
-			                     		            		           
-			          </div>           
-			        </div>
-			       
+			<div class="col-md-12">			
+				<div class="form-horizontal templatemo-create-account templatemo-container" >
+					<div class="form-inner">
+						<div class="form-group">
+				          <div class="col-md-12" style="text-align: center;">		          	
+				            <!-- <label for="first_name" class="control-label" style="width: 20%; float: left;line-height: 30px;">用户名:</label> -->
+				            <label class="label-style"> 手机号</label>
+				            <input type="text" class="form-control text-width" id="docTel" onchange="regPhone();" placeholder="请输入手机号">            		            		            
+				          </div>             
+				        </div>
+				        <div class="form-group">
+				          <div class="col-md-12" style="text-align: center;">		          	
+				             <label class="label-style"> 验证码</label>
+				            <input type="text" class="form-control text-code" id="docVerycode" placeholder="请输入验证码"> 
+				            <!-- <button class="label-code"  id="docCode" onclick="settime(this)"> 获取验证码</button>        		               -->
+				            <input type="button" class="label-code" value="获取验证码" id="btn" onclick="docGetcode(this)">
+				          </div>              
+				        </div>			
+				        <div class="form-group">
+				          <div class="col-md-12">		          	
+				              <label class="label-style"> 密码</label>
+				              <input type="password" class="form-control text-width" id="docPassword" placeholder="请输入密码">	           		            		            
+				          </div>           
+				        </div>
+				        <div class="form-group">
+				          <div class="col-md-12">		          	
+				              <label class="label-style"> 确认密码</label>
+				              <input type="password" class="form-control text-width" id="confPassword" placeholder="再次输入密码">	           		            		            
+				          </div>           
+				        </div>
+				         <div class="form-group">
+				          <div class="col-md-12">		          	
+				              <label class="label-style"> 姓名</label>
+				              <input  class="form-control text-width" id="docName" placeholder="请输入真实姓名(必填)">	           		            		            
+				          </div>           
+				        </div>
+				        <div class="form-group">
+				          <div class="col-md-12">		          	
+				              <label class="label-style"> 微信号</label>
+				              <input class="form-control text-width" id="docWeixin" placeholder="请输入微信号(必填)">	           		            		            
+				          </div>           
+				        </div>
+				         <div class="form-group">
+				          <div class="col-md-12">		          	
+				              <label class="label-style">电话/视频咨询价格</label>
+				              <input class="form-control text-width" id="onPrice" placeholder="电话/视频咨询价格">	
+				              <label style="margin-top: 5px; width: 40px; font-size:0.8vw;font-weight: 500;color: red" >&nbsp;&nbsp;/小时</label>           		            		            
+				          </div>           
+				        </div>
+				         <div class="form-group">
+				          <div class="col-md-12">		          	
+				              <label class="label-style"> 面对面咨询价格</label>
+				              <input type="text" class="form-control text-width" id="offPrice" placeholder="面对面咨询价格">	
+				              <label style="margin-top: 5px; width: 40px; font-size:0.8vw;font-weight: 500;color: red">&nbsp;&nbsp;/小时</label>           		            		            
+				          </div>           
+				        </div>
+				        <!-- 职业背景描述 -->
+				         <div class="form-group">         	
+				          <div class="col-md-12">		          	
+				              <label class="label-style" style="width: 200px; text-align: left;" > 职业背景描述（将对外显示）</label>
+				              <textarea style="width: 100%;float: left; height: 160px;" class="form-control" id="docDesp" placeholder="职业背景描述(至少20个字)"></textarea> 
+				                     		            		           
+				          </div>           
+				        </div>
+				       
 
-			        <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
+				        <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
 
-			        	<!-- pic 1 -->
-					     <div class="form-group field-uploadform-imagefiles-0">
-						     <label class="control-label" style="margin-left: 20%; margin-top: 30px; font-size: 16px;" for="uploadform-imagefiles-0">上传头像照片</label>
-						     <input type="hidden"  value="" name="UploadForm[imageFiles][0]">
-						     <input id="uploadform-imagefiles-0"  style="margin-left: 20% !important; " type="file" name="UploadForm[imageFiles][0]" onchange="javascript:headImagePreview();">
-						     <div class="help-block"></div>
-					    </div>
-					    <img id="previewHead" width="180" height="180" style="display: block; width: 200px; background-color: #69c; height: 200px; margin-left: 20%;">
-					    <div style="height: 30px; width: 100%"></div>
-					    
-					    <!-- pic-2 -->
-					    <div class="form-group field-uploadform-imagefiles-1">
-						     <label class="control-label"  style="margin-left: 20%; font-size: 16px;" for="uploadform-imagefiles-1">请上传医生执业证书照片</label>
-						     <input type="hidden" value="" name="UploadForm[imageFiles][1]">
-						     <input id="uploadform-imagefiles-1" style="margin-left: 20% !important;" type="file" name="UploadForm[imageFiles][1]" onchange="javascript:busImagePreview();">
-						     <div class="help-block"></div>
-					    </div>
-					     <img id="previewBus" width="180" height="180" style="display: block;  background-color: #69c;  width: 200px; height: 200px; margin-left: 20%;">
+				        	<!-- pic 1 -->
+						     <div class="form-group field-uploadform-imagefiles-0">
+							     <label class="control-label" style="margin-left: 20%; margin-top: 30px; font-size: 16px;" for="uploadform-imagefiles-0">上传头像照片</label>
+							     <input type="hidden"  value="" name="UploadForm[imageFiles][0]">
+							     <input id="uploadform-imagefiles-0"  style="margin-left: 20% !important; " type="file" name="UploadForm[imageFiles][0]" onchange="javascript:headImagePreview();">
+							     <div class="help-block"></div>
+						    </div>
+						    <img id="previewHead" width="180" height="180" style="display: block; width: 200px; background-color: #69c; height: 200px; margin-left: 20%;">
+						    <div style="height: 30px; width: 100%"></div>
+						    
+						    <!-- pic-2 -->
+						    <div class="form-group field-uploadform-imagefiles-1">
+							     <label class="control-label"  style="margin-left: 20%; font-size: 16px;" for="uploadform-imagefiles-1">请上传医生执业证书照片</label>
+							     <input type="hidden" value="" name="UploadForm[imageFiles][1]">
+							     <input id="uploadform-imagefiles-1" style="margin-left: 20% !important;" type="file" name="UploadForm[imageFiles][1]" onchange="javascript:busImagePreview();">
+							     <div class="help-block"></div>
+						    </div>
+						     <img id="previewBus" width="180" height="180" style="display: block;  background-color: #69c;  width: 200px; height: 200px; margin-left: 20%;">
 
-					     <!-- pic 3 -->
-					      <div style="height: 30px; width: 100%"></div>
-					      <div class="form-group field-uploadform-imagefiles-3">
-						     <label class="control-label"  style="margin-left: 20%; font-size: 16px;" for="uploadform-imagefiles-3">请上传身份证照片</label>
-						     <input type="hidden" value="" name="UploadForm[imageFiles][3]">
-						     <input id="uploadform-imagefiles-3" style="margin-left: 20% !important;" type="file" name="UploadForm[imageFiles][3]" onchange="javascript:idImagePreview();">
-						     <div class="help-block"></div>
-					    </div>
-					     <img id="previewID" width="180" height="180" style="display: block;  background-color: #69c;  width: 200px; height: 200px; margin-left: 20%;">
+						     <!-- pic 3 -->
+						      <div style="height: 30px; width: 100%"></div>
+						      <div class="form-group field-uploadform-imagefiles-3">
+							     <label class="control-label"  style="margin-left: 20%; font-size: 16px;" for="uploadform-imagefiles-3">请上传身份证照片</label>
+							     <input type="hidden" value="" name="UploadForm[imageFiles][3]">
+							     <input id="uploadform-imagefiles-3" style="margin-left: 20% !important;" type="file" name="UploadForm[imageFiles][3]" onchange="javascript:idImagePreview();">
+							     <div class="help-block"></div>
+						    </div>
+						     <img id="previewID" width="180" height="180" style="display: block;  background-color: #69c;  width: 200px; height: 200px; margin-left: 20%;">
 
-					    <button style="display: none;" id="target">Submit</button>
-					    <!-- <button id="target">Submit</button> -->
-					    <!-- <div style="height: 100px;width: 100%;"></div> -->
-					<?php ActiveForm::end() ?>	 
+						    <button style="display: none;" id="target">Submit</button>
+						    <!-- <button id="target">Submit</button> -->
+						    <!-- <div style="height: 100px;width: 100%;"></div> -->
+						<?php ActiveForm::end() ?>	 
 
-				</div>	
-					<div style="height: 30px; width: 100%;"></div>
-					<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 25%;" onclick="doctorReg();" >立即注册</button></p></div>
-					<div style="height: 100px;"></div>	   
-		     </div>	
-		      
-		</div>
+					</div>	
+						<div style="height: 30px; width: 100%;"></div>
+						<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 25%;" onclick="doctorReg();" >立即注册</button></p></div>
+						<div style="height: 100px;"></div>	   
+			     </div>	
+			      
+			</div>
 	  
 	</div>
 

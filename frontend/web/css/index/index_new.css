@@ -391,10 +391,6 @@ dl, dt, dd{
 
 
 
-
-
-
-
 /*  button的样式 */
 .consult{
   width: 50%;
@@ -402,7 +398,6 @@ dl, dt, dd{
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 }
 
 .consult .consult-button
@@ -410,15 +405,44 @@ dl, dt, dd{
   position: absolute;
   background-color: #69c; 
   position: relative;
+  margin-left: 25%;
   color: #fff; 
   line-height: 20px;
-  font-size: 1.5em;
-  width: 120px;
-  height: 2em;
-  margin-left: auto;
+  font-size: 30px;
+  width: 200px;
+  height: 60px;
+  /*text-align: center;*/
+  /*margin-left: auto;*/
   margin-right: auto;
   border-radius: 10px;
 }
+@media(max-width: 700px)
+{
+   .consult{
+      width: 50%;
+      float: left;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .consult .consult-button
+    {
+      position: absolute;
+      background-color: #69c; 
+      position: relative;
+      color: #fff; 
+      line-height: 20px;
+      font-size: 1.5em;
+      width: 120px;
+      height: 2em;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+    }
+}
+
 
 
 
