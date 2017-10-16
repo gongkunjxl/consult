@@ -33,5 +33,5 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
-
+/frontend/web/testupload
 /common

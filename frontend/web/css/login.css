@@ -25,7 +25,7 @@
 	float: left;
 	text-align: right;
 	margin-right:10px; 
-	font-size: 1vw;
+	font-size: 14px;
 	/*font-size: 15px;  */
 	/*line-height: 30px;*/
 }
@@ -74,7 +74,7 @@
 	width: 40%;
 	float: left;
 	padding: 0 5px;
-	font-size: 1vw;
+	font-size: 14px;
 	height: 30px;
 }
 .text-code
@@ -82,9 +82,12 @@
 	width: 20%;
 	float: left;
 	padding: 0 5px;
-	font-size: 1vw;
+	font-size: 14px;
 	height: 30px;
 	margin-right: 20px;	
+}
+.label-size{
+		font-size: 14px;
 }
 @media(max-width: 700px)
 {
@@ -93,7 +96,7 @@
 		width: 200px;
 		float: left;
 		padding: 0 5px;
-		font-size: 1vw;
+		font-size: 12px;
 		height: 30px;
 		margin-bottom: 10px;
 	}
@@ -102,12 +105,14 @@
 		width: 100px;
 		float: left;
 		padding: 0 5px;
-		font-size: 1vw;
+		font-size: 12px;
 		height: 30px;
 		margin-bottom: 10px;
 		margin-right: 20px;	
 	}
-
+	.label-size{
+		font-size: 12px;
+	}
 }
 
 
