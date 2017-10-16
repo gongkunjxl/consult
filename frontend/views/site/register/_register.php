@@ -23,7 +23,7 @@ $this->title = 'Register';
 		<div class="swiper-line" id="userLine" ></div>
 		<div class="swiper-line" id="docLine" style="background: #fff" ></div>
 </div>
-	<div class="swiper-wrapper " >
+	<div class="swiper-wrapper" style="width: 70%;" >
 		<!-- 普通用户的注册 -->
 			
 	    	<div class="swiper-slide" id="userSwip" style="height: 500px;"  >
