@@ -123,7 +123,7 @@ $nickname = $session->get('nickname');
             
             <div style="width: 33.3%; text-align: center; float: right;">
                 <h3>联系我们</h3>
-                <address class="address" style="font-size: 1vw; padding-left: 0;">
+                <address class="address" style="font-size: 12px; padding-left: 0;">
                     <ul class="list-unstyled">
                         <li> 手机：15901023228 </li>
                         <li> 微信：197238405 </li>
