@@ -219,8 +219,10 @@ $this->title = 'Register';
 		var userSwip = document.getElementById("userSwip");
 		var docSwip = document.getElementById("docSwip");
 		userSwip.style.height="500px";
-		$('#userSwip').show();
-		$('#docSwip').hide();
+		userSwip.style.display="";
+		docSwip.style.display="none";
+		// $('#userSwip').show();
+		// $('#docSwip').hide();
 
 	}
 	function swipDoctor()
@@ -237,9 +239,11 @@ $this->title = 'Register';
 		//设置显示
 		var userSwip = document.getElementById("userSwip");
 		var docSwip = document.getElementById("docSwip");
+		userSwip.style.display="none";
+		docSwip.style.display="";
 		// userSwip.style.height="500px";
-		$('#userSwip').hide();
-		$('#docSwip').show();
+		// $('#userSwip').hide();
+		// $('#docSwip').show();
 		// docSwip.show();
 	}
 
