@@ -15,12 +15,7 @@ $this->title = 'Register';
 	<!-- 增加注册css -->
 	<link href="css/login.css" rel="stylesheet" type="text/css">	
 
-<div class="swiper-container swiper-width" >
-<!-- 	<div class="my-pagination">
-		<ul class="my-pagination-ul">
-			<li> 用户注册</li>
-		</ul>
-	</div> -->
+<div class="swiper-width" >
 	<div style="height: 40px; width: 100%; background-color: #fff; ">
 		<button class="swiper-btn" id="userButton" onclick="swipUser()">普通用户</button>
 		<button class="swiper-btn" id="docButton" style="color: black" onclick="swipDoctor()"> 医生注册</button>
@@ -30,7 +25,7 @@ $this->title = 'Register';
 
 	<div class="swiper-wrapper" >
 		<!-- 普通用户的注册 -->
-			<div style="width: 100%; height: 1px">1px</div>
+			
 	    	<div class="swiper-slide" id="userSwip" style="height: 500px;"  >
 	        	<div class="user_zc_body">   
 	        	 	<h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">用户注册</h3>
@@ -202,6 +197,7 @@ $this->title = 'Register';
 		</div>
 	</div>
 </div>
+
 
 <!--  用户和医生显示的切换 -->
 <script type="text/javascript">
