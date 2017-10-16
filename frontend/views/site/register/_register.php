@@ -28,9 +28,9 @@ $this->title = 'Register';
 		<div class="swiper-line" id="userLine" ></div>
 		<div class="swiper-line" id="docLine" style="background: #fff" ></div>
 
-	<div class="swiper-wrapper">
+	<div class="swiper-wrapper" >
 		<!-- 普通用户的注册 -->
-			<p> help</p>
+			<!-- <p> help</p> -->
 	    	<div class="swiper-slide" id="userSwip" style="height: 500px;"  >
 	        	<div class="user_zc_body">   
 	        	 	<h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">用户注册</h3>
