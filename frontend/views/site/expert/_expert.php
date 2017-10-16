@@ -47,10 +47,10 @@ $base = "'".$base."'";
                         <span>评分:&nbsp;&nbsp;<?php echo $data['getinfo'][$i]['score']; ?>分&nbsp;&nbsp;</span>
                     </div>
                     <div class="price">
-                         <span>&nbsp;&nbsp;线上预约价格:&nbsp;&nbsp;<?php echo $data['getinfo'][$i]['onPrice']; ?>/小时</span>
+                         <span>&nbsp;&nbsp;电话/视频咨询价格:&nbsp;&nbsp;<?php echo $data['getinfo'][$i]['onPrice']; ?>/小时</span>
                     </div>
                     <div class="price">
-                         <span>&nbsp;&nbsp;线下预约价格:&nbsp;&nbsp;<?php echo $data['getinfo'][$i]['offPrice']; ?>/小时</span>
+                         <span>&nbsp;&nbsp;面对面咨询价格:&nbsp;&nbsp;<?php echo $data['getinfo'][$i]['offPrice']; ?>/小时</span>
                     </div>
                     <div class="tmp_btn">
                         <input class="btn" type="button" onClick="consultToggle()" name="" value="立即预约">

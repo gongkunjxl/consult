@@ -34,7 +34,7 @@ $nickname = $session->get('nickname');
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
             <!-- logo start -->
-         <h1 class="logo"><a class="navbar-brand" style="width: 300px;height: 50px;" href="<?php echo Url::to(['site/index']);?>"><img src="images/logo.png" alt=" 心事网" title=" 心事网" class="ylw-img-responsive logo-hidden" /><img src="images/logo.png" alt=" 心事网" title=" 心事网" class="ylw-img-responsive logo-visible" /></a><small class="pull-left"><a href="<?php echo Url::to(['site/index']);?>" class="visible-lg"></a></small></h1>
+         <h1 class="logo"><a class="navbar-brand" style="width: 300px;height: 50px;" href="<?php echo Url::to(['site/index']);?>"><img src="images/logo.png" alt=" 心事网" title=" 心事网" class="ylw-img-responsive logo-hidden" /><img style="width: 300px;height: 50px;" src="images/logo.png" alt=" 心事网" title=" 心事网" class="ylw-img-responsive logo-visible" /></a><small class="pull-left"><a href="<?php echo Url::to(['site/index']);?>" class="visible-lg"></a></small></h1>
         <!-- 
           <a class="navbar-brand" href="<?php //echo Url::to(['site/index']);?>"><img src="images/logo.png" alt="心事网" title="心事网" class="ylw-img-responsive logo-hidden" style="width: 300px;height: 64px; "/></a>
          --> 
