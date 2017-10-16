@@ -11,7 +11,7 @@ $this->title = 'Register';
 	<link href="swiper/font-awesome.css" rel="stylesheet" type="text/css"><!--字体图标-->
 	<!-- <link href="swiper/public.css" rel="stylesheet" type="text/css"><!--默认共用样式--> 
 	<link rel="stylesheet" href="swiper/swiper.min.css">
-	<script src="swiper/swiper.min.js"></script>
+	<script src="swiper/swiper.min.js" type="text/javascript"></script>
 	<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
 
 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -199,7 +199,6 @@ $this->title = 'Register';
 
 	<!--  实现数据上传到控制器  -->
 	<script type="text/javascript">
-		 
 		/* 短信验证码获取 */
 		//设置验证码获取的倒计时
         var countdown=60; 
@@ -583,15 +582,12 @@ $this->title = 'Register';
 </script>
 
 
-
-
-
 <script> 
+	alert("fuck");
 	var mySwiper = new Swiper('.swiper-container',{
 	pagination: '.my-pagination-ul',
 	paginationClickable: true,
 	paginationBulletRender: function (index, className) {
-		alert(index);
 	switch (index) {
 	  case 0: name='普通用户';break;
 	  case 1: name='医生注册';break;
