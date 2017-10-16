@@ -44,7 +44,7 @@ $nickname = $session->get('nickname');
          </div>
 
         <!-- <nav class="collapse navbar-right navbar-collapse" style="margin-left: 20%; float: left !important;" role="navigation"> -->
-        <nav class="collapse navbar-right navbar-collapse" style="text-align: left;" role="navigation">
+        <nav class="collapse navbar-right navbar-collapse" style="text-align: left; font-size:18px;" role="navigation">
         <ul class="nav navbar-nav"  id="nav">
 
 
