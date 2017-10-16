@@ -5,14 +5,14 @@ use yii\widgets\ActiveForm;
 
 $this->title = 'Register';
 ?>
-<div style="width: 100%; height: 500px;"></div>
+<div style="width: 100%; height: 100px;"></div>
 	
 	<link href="swiper/page_style.css" rel="stylesheet" type="text/css"><!--页面所需样式-->
 	<link href="swiper/font-awesome.css" rel="stylesheet" type="text/css"><!--字体图标-->
 	<!-- <link href="swiper/public.css" rel="stylesheet" type="text/css"><!--默认共用样式--> 
 	<link rel="stylesheet" href="swiper/swiper.min.css">
 	<script src="swiper/swiper.min.js"></script>
-	<!-- <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script> -->
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
 
 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
@@ -584,24 +584,24 @@ $this->title = 'Register';
 
 
 <script> 
-var mySwiper = new Swiper('.swiper-container',{
-pagination: '.my-pagination-ul',
-paginationClickable: true,
-paginationBulletRender: function (index, className) {
-switch (index) {
-  case 0: name='普通用户';break;
-  case 1: name='医生注册';break;
-  
-  default: name='';
-}
-      return '<li id="switch" value="'+index+'"'+' class="' + className + '">' + name + '</li>';
-  }
-})
+	var mySwiper = new Swiper('.swiper-container',{
+	pagination: '.my-pagination-ul',
+	paginationClickable: true,
+	paginationBulletRender: function (index, className) {
+		alert(index);
+	switch (index) {
+	  case 0: name='普通用户';break;
+	  case 1: name='医生注册';break;
+	  
+	  default: name='';
+	}
+	      return '<li id="switch" value="'+index+'"'+' class="' + className + '">' + name + '</li>';
+	  }
+	})
 </script>
 
 
-<div style="margin-bottom: 100px;">	
-</div>
+<div style="margin-bottom: 100px;">	</div>
 
 
 
