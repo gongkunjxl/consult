@@ -15,7 +15,7 @@ $this->title = 'Register';
 	<!-- 增加注册css -->
 	<link href="css/login.css" rel="stylesheet" type="text/css">	
 
-<div class="swiper-container swiper-width" >
+<div class="swiper-width"  >
 	<div style="height: 40px; width: 100%; background-color: #fff; ">
 		<button class="swiper-btn" id="userButton" onclick="swipUser()">普通用户</button>
 		<button class="swiper-btn" id="docButton" style="color: black" onclick="swipDoctor()"> 医生注册</button>
@@ -23,7 +23,7 @@ $this->title = 'Register';
 		<div class="swiper-line" id="userLine" ></div>
 		<div class="swiper-line" id="docLine" style="background: #fff" ></div>
 </div>
-	<div class="swiper-wrapper" >
+	<div class="swiper-wrapper swiper-width"  style="margin-top: 0 !important">
 		<!-- 普通用户的注册 -->
 			
 	    	<div class="swiper-slide" id="userSwip" style="height: 500px;"  >
