@@ -114,8 +114,25 @@
 		font-size: 12px;
 	}
 }
-
-
+.swiper-btn{
+	background: #fff;
+	border: 0;
+	width: 50%; 
+	float: left;
+	text-align: center; 
+	padding-top: 10px;
+	font-style: 16px;
+	color: #21a4f4;
+}
+.swiper-line{
+	background: #21a4f4; 
+	border: 0; 
+	width: 50%; 
+	height: 2px; 
+	margin-bottom: 20px; 
+	float: left;
+	text-align: center;
+}
 
 
 

@@ -4,13 +4,11 @@ use  yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
 $this->title = 'Register';
-?>
-<div style="width: 100%; height: 100px;"></div>
-	
+?>	
 	<link href="swiper/page_style.css" rel="stylesheet" type="text/css"><!--页面所需样式 -->
 	<link href="swiper/font-awesome.css" rel="stylesheet" type="text/css"><!--字体图标 -->
 	<link rel="stylesheet" href="swiper/swiper.min.css">
-	<script src="swiper/swiper.min.js" type="text/javascript"></script>
+	<!-- <script src="swiper/swiper.min.js" type="text/javascript"></script> -->
 
 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">	
@@ -18,11 +16,21 @@ $this->title = 'Register';
 	<link href="css/login.css" rel="stylesheet" type="text/css">	
 
 <div class="swiper-container swiper-width" >
-	<div class="my-pagination"><ul class="my-pagination-ul"></ul></div>
-	<div class="swiper-wrapper" id="swiperId" style="height: 500px;">
+<!-- 	<div class="my-pagination">
+		<ul class="my-pagination-ul">
+			<li> 用户注册</li>
+		</ul>
+	</div> -->
+	<div style="height: 40px; width: 100%; background-color: #fff; ">
+		<button class="swiper-btn" id="userButton" onclick="swipUser()">普通用户</button>
+		<button class="swiper-btn" id="docButton" style="color: black" onclick="swipDoctor()"> 医生注册</button>
+	</div>
+		<div class="swiper-line" id="userLine" ></div>
+		<div class="swiper-line" id="docLine" style="background: #fff" ></div>
 
+	<div class="swiper-wrapper" id="swiperId">
 		<!-- 普通用户的注册 -->
-	    	<div class="swiper-slide">
+	    	<div class="swiper-slide" id="userSwip" style="height: 500px;"  >
 	        	<div class="user_zc_body">   
 	        	 	<h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">用户注册</h3>
 					<div class="col-md-12" >			
@@ -40,7 +48,7 @@ $this->title = 'Register';
 						          <div class="col-md-12" style="text-align: center;">		          	
 						             <label class="label-style label-size"> 验证码</label>
 						             <input type="text" class="form-control text-code" id="userVerycode" placeholder="请输入验证码"> 
-						          	 <input type="button" class="label-code" value="获取验证码" id="btn" onclick="userGetcode(this)">
+						          	 <input type="button" class="label-code" style="border:0"  value="获取验证码" id="btn" onclick="userGetcode(this)">
 						          </div>              
 						        </div>
 
@@ -66,7 +74,7 @@ $this->title = 'Register';
 						        </div>
 
 							</div>	
-							  	<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 30%;" onclick="userReg();" >立即注册</button></p></div>
+							  	<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 30%; border:0" onclick="userReg();" >立即注册</button></p></div>
 							   <div style="height: 100px;"></div>		    	
 					    </div>		      
 					</div>
@@ -74,7 +82,7 @@ $this->title = 'Register';
 			</div>
 	<!-- 医生注册 -->
 
-		<div class="swiper-slide">
+		<div class="swiper-slide" id="docSwip" style="display: none;">
 			<div class="user_zc_body">
 				 <h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">医生注册</h3>
 				<div class="col-md-12">			
@@ -90,8 +98,7 @@ $this->title = 'Register';
 					        <div class="form-group">
 					          <div class="col-md-12" style="text-align: center;">		          	
 					             <label class="label-style label-size"> 验证码</label>
-					            <input type="text" class="form-control text-code" id="docVerycode" placeholder="请输入验证码">     		               -->
-					            <input type="button" class="label-code" value="获取验证码" id="btn" onclick="docGetcode(this)">
+					            <input type="text" class="form-control text-code" id="docVerycode" placeholder="请输入验证码">			            <input type="button" class="label-code" style="border:0" value="获取验证码" id="btn" onclick="docGetcode(this)">
 					          </div>              
 					        </div>	
 
@@ -186,7 +193,7 @@ $this->title = 'Register';
 
 						</div>	
 							<div style="height: 30px; width: 100%;"></div>
-							<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 25%;" onclick="doctorReg();" >立即注册</button></p></div>
+							<div class="user_zc_btn"><p class="p_btn"><button  class="reg-button" style="margin-left: 25%;border:0" onclick="doctorReg();" >立即注册</button></p></div>
 							<div style="height: 100px;"></div>	   
 				    </div>	      
 				</div>  
@@ -194,6 +201,50 @@ $this->title = 'Register';
 		</div>
 	</div>
 </div>
+
+<!--  用户和医生显示的切换 -->
+<script type="text/javascript">
+	function swipUser()
+	{
+		//设置样式显示隐藏
+		var userBtn = document.getElementById("userButton");
+		var docBtn = document.getElementById("docButton");
+		var userLine = document.getElementById("userLine");
+		var docLine = document.getElementById("docLine");
+		userBtn.style.color="#21a4f4";
+		docBtn.style.color="#000";
+		userLine.style.background="#21a4f4";
+		docLine.style.background="#fff";
+		//设置显示
+		var userSwip = document.getElementById("userSwip");
+		var docSwip = document.getElementById("docSwip");
+		userSwip.style.height="500px";
+		$('#userSwip').show();
+		$('#docSwip').hide();
+
+	}
+	function swipDoctor()
+	{
+		var userBtn = document.getElementById("userButton");
+		var docBtn = document.getElementById("docButton");
+		var userLine = document.getElementById("userLine");
+		var docLine = document.getElementById("docLine");
+		userBtn.style.color="#000";
+		docBtn.style.color="#21a4f4";
+		userLine.style.background="#fff";
+		docLine.style.background="#21a4f4";
+	
+		//设置显示
+		var userSwip = document.getElementById("userSwip");
+		var docSwip = document.getElementById("docSwip");
+		// userSwip.style.height="500px";
+		$('#userSwip').hide();
+		$('#docSwip').show();
+		// docSwip.show();
+	}
+
+</script>
+
 
 	<!--  实现数据上传到控制器  -->
 	<script type="text/javascript">
@@ -581,20 +632,22 @@ $this->title = 'Register';
 
 
 <script> 
-	var mySwiper = new Swiper('.swiper-container',{
-	pagination: '.my-pagination-ul',
-	paginationClickable: true,
-	paginationBulletRender: function (index, className) {
-		// alert("help");
-	switch (index) {
-	  case 0: name='普通用户';break;
-	  case 1: name='医生注册';break;
+
+
+	// var mySwiper = new Swiper('.swiper-container',{
+	// pagination: '.my-pagination-ul',
+	// paginationClickable: true,
+	// paginationBulletRender: function (index, className) {
+	// 	// alert("help");
+	// switch (index) {
+	//   case 0: name='普通用户';break;
+	//   case 1: name='医生注册';break;
 	  
-	  default: name='';
-	}
-	      return '<li id="switch" value="'+index+'"'+' class="' + className + '">' + name + '</li>';
-	  }
-	})
+	//   default: name='';
+	// }
+	//       return '<li id="switch" value="'+index+'"'+' class="' + className + '">' + name + '</li>';
+	//   }
+	// })
 </script>
 
 
