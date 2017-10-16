@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 
 $this->title = 'Register';
 ?>
+<div style="width: 100%; height: 500px;"></div>
 	
 	<link href="swiper/page_style.css" rel="stylesheet" type="text/css"><!--页面所需样式-->
 	<link href="swiper/font-awesome.css" rel="stylesheet" type="text/css"><!--字体图标-->
