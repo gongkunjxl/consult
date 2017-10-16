@@ -30,6 +30,7 @@ $this->title = 'Register';
 
 	<div class="swiper-wrapper" id="swiperId">
 		<!-- 普通用户的注册 -->
+		    <p></p>
 	    	<div class="swiper-slide" id="userSwip" style="height: 500px;"  >
 	        	<div class="user_zc_body">   
 	        	 	<h3 class="margin-bottom-15" style="text-align: center; margin-top: 30px;">用户注册</h3>
