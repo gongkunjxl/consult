@@ -18,11 +18,7 @@ $this->title = 'Register';
 	<!-- 增加注册css -->
 	<link href="css/login.css" rel="stylesheet" type="text/css">	
 
-<div class="swiper-container swiper-width" >
-	<div class="my-pagination"><ul class="my-pagination-ul"></ul></div>
 
-		
-	</div>
 
 	<!--  实现数据上传到控制器  -->
 	<script type="text/javascript">
