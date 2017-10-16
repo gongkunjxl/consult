@@ -43,7 +43,7 @@ $this->title = '登陆页面';
 		          <div class="col-md-12">
 		          	<div class="control-wrapper">
 		          		<input type="button" value="登陆" style="width: 20%;" class="btn btn-info" onclick="userLogin();">
-		          		<a href="#" class="text-right pull-right">忘记密码?</a>
+		          		<a href="<?php echo Url::to(['site/forget']); ?>" class="text-right pull-right">忘记密码?</a>
 		          	</div>
 		          </div>
 		        </div>

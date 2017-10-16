@@ -233,6 +233,38 @@ class SiteController extends Controller
             return $re_data;
          }
     }
+    /*
+     * 忘记密码响应
+    */
+    public function actionForget()
+    {
+        $model = new UploadForm();
+        if(Yii::$app->request->isAjax)
+        {
+            $data = Yii::$app->request->post();
+            $username= explode(":", $data['username']);
+            $password= explode(":", $data['password']);
+            $username = $username[0];
+            $password= $password[0];
+            
+            //验证用户的密码
+            $db = Yii::$app->db;
+            $sel_sql = "UPDATE con_user SET password='$password' WHERE username=$username";
+            $rep =  $db->createCommand($sel_sql)->execute();
+            $re_data=[
+                'status' => '100',
+            ];
+            if($rep){
+               $re_data['status'] = '200';
+            }
+
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            return $re_data;
+         }
+        return $this->render('forget/main', ['model' => $model]);
+    }
+
+
 
     /*
         * 手机号码注册验证 
