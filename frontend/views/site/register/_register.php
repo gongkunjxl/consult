@@ -588,6 +588,7 @@ $this->title = 'Register';
 	pagination: '.my-pagination-ul',
 	paginationClickable: true,
 	paginationBulletRender: function (index, className) {
+		alert("help");
 	switch (index) {
 	  case 0: name='普通用户';break;
 	  case 1: name='医生注册';break;
