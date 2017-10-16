@@ -581,7 +581,6 @@ $this->title = 'Register';
 
 
 <script> 
-	// alert("fuck");
 	var mySwiper = new Swiper('.swiper-container',{
 	pagination: '.my-pagination-ul',
 	paginationClickable: true,
