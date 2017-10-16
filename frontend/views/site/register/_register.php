@@ -130,7 +130,7 @@ $this->title = 'Register';
 					          <div class="col-md-12">		          	
 					              <label class="label-style label-size">电话/视频咨询价格</label>
 					              <input class="form-control text-width" id="onPrice" placeholder="电话/视频咨询价格">	
-					              <label style="margin-top: 5px; width: 40px; font-size:12px;font-weight: 500;color: red" >&nbsp;&nbsp;/小时</label>
+					              <label style="margin-top: 5px; width: 40px; float: left; font-size:12px;font-weight: 500;color: red" >&nbsp;&nbsp;/小时</label>
 					          </div>           
 					        </div>
 
@@ -138,7 +138,7 @@ $this->title = 'Register';
 					          <div class="col-md-12">		          	
 					              <label class="label-style label-size"> 面对面咨询价格</label>
 					              <input type="text" class="form-control text-width" id="offPrice" placeholder="面对面咨询价格">	
-					              <label style="margin-top: 5px; width: 40px; font-size:12px;font-weight: 500;color: red">&nbsp;&nbsp;/小时</label>
+					              <label style="margin-top: 5px; width: 40px; float: left; font-size:12px;font-weight: 500;color: red">&nbsp;&nbsp;/小时</label>
 					          </div>           
 					        </div>
 
