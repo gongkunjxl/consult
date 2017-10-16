@@ -7,8 +7,8 @@ $this->title = 'Register';
 ?>
 	
 	<link href="swiper/page_style.css" rel="stylesheet" type="text/css"><!--页面所需样式-->
-	<link href="swiper/font-awesome.css" rel="stylesheet" type="text/css"><!--字体图标-->
-	<link href="swiper/public.css" rel="stylesheet" type="text/css"><!--默认共用样式-->
+	<!-- <link href="swiper/font-awesome.css" rel="stylesheet" type="text/css"><!--字体图标--> -->
+	<!-- <link href="swiper/public.css" rel="stylesheet" type="text/css"><!--默认共用样式--> -->
 	<!-- <link rel="stylesheet" href="swiper/swiper.min.css"> -->
 	<!-- <script src="swiper/swiper.min.js"></script> -->
 	<!-- <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script> -->
