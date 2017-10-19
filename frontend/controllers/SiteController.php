@@ -417,7 +417,7 @@ class SiteController extends Controller
             if($start<0){
                 $start=0;
             }
-            $sel_sql = "SELECT * FROM con_article where themeId=$type[1]  ORDER BY ctime LIMIT $start,10";
+            $sel_sql = "SELECT * FROM con_article where themeId=$type[1]  ORDER BY ctime desc LIMIT $start,10";
             $getinfo =  $db->createCommand($sel_sql)->queryAll();  
 
             //获取评论数据
