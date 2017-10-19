@@ -740,7 +740,7 @@ class SiteController extends Controller
 
             //我的发帖
             $db = Yii::$app->db;
-            $sel_sql = "SELECT id,title,ctime FROM con_article WHERE userId=$userId";
+            $sel_sql = "SELECT id,title,ctime FROM con_article WHERE userId=$userId order by ctime desc";
             $getinfo = Yii::$app->db->createCommand($sel_sql)->queryAll();
             $length = count($getinfo);
                    
@@ -749,7 +749,7 @@ class SiteController extends Controller
                 $article_id = $getinfo[$i]['id'];
                 $tm=date("Y-m-d H:i:s",$getinfo[$i]['ctime']);
                 $getinfo[$i]['time'] = $tm;
-                $sel_sql = "SELECT id FROM con_tips where articleId=$article_id and if_read=0";
+                $sel_sql = "SELECT id FROM con_tips where articleId=$article_id and if_read=0 order by ctime desc";
                 $tipsinfo = $db->createCommand($sel_sql)->queryOne();
                 if($tipsinfo){
                     $getinfo[$i]['if_read'] =0;
@@ -769,13 +769,13 @@ class SiteController extends Controller
             // usort($data['getinfo'], array($this,'levelSort'));
     
             //我的回帖
-            $sel_sql = "SELECT articleId FROM con_tips where from_id=$userId";
+            $sel_sql = "SELECT articleId FROM con_tips where from_id=$userId order by ctime desc";
             $repinfo = Yii::$app->db->createCommand($sel_sql)->queryAll();
             $length = count($repinfo);
             for($i=0; $i <$length ; $i++) {   
                 //获取文章的标题等信息
                 $articleId = $repinfo[$i]['articleId'];
-                $sel_sql="SELECT title,ctime FROM con_article WHERE id=$articleId";
+                $sel_sql="SELECT title,ctime FROM con_article WHERE id=$articleId order by ctime desc";
                 $artinfo = $db->createCommand($sel_sql)->queryOne();
                 if($artinfo){
                     $tm=date("Y-m-d H:i:s",$artinfo['ctime']);
