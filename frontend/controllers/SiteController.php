@@ -486,7 +486,7 @@ class SiteController extends Controller
                 $artinfo['author'] = $userinfo['nickname'];
 
                 //获取所有的评论信息
-                $sel_sql = "SELECT * FROM con_tips where articleId=$article_id";
+                $sel_sql = "SELECT * FROM con_tips where articleId=$article_id order by ctime desc";
                 $tipinfo = Yii::$app->db->createCommand($sel_sql)->queryAll();
                 $length = count($tipinfo);
                 $artinfo['answer'] = $length;  //回答数量
