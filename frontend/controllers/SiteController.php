@@ -8,6 +8,7 @@ use app\models\UploadForm;
 use yii\web\UploadedFile;
 use yii\web\levelSort;
 use app\models\SmsDemo;
+date_default_timezone_set("Asia/Shanghai");
 /**
  * Site controller
  */
