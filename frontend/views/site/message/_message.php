@@ -27,7 +27,7 @@ use  yii\helpers\Url;
 
                 <?php }   }else{ ?>
                  <p style="font-size: 16px;text-align: center;color: red">你还没发表过任何提问</p>
-              <?php }?>
+              <?php }?> 
             <!-- 我的回帖 -->
             <h3 style="text-align: left; padding-left: 18px; padding-bottom: 20px; padding-top: 20px; color: #EE4000">我的回帖:</h3>
              <?php 
