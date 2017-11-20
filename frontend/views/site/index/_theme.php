@@ -20,8 +20,8 @@ use  yii\helpers\Url;
             <div class="content">
                 <a href="<?php echo Url::to(['site/theme','type'=>'2','page' => '1']); ?>">
                                     <!-- <a href="<?php //echo Url::to(['site/theme','type'=>'2']); ?>"> -->
-                    <h3 style="color:#004b9f; ">情绪压力</h3>
-                    <img class="theme-img" src="images/yali.jpg" >
+                    <h3 style="color:#004b9f; ">抑郁焦虑</h3>
+                    <img class="theme-img" src="images/yeyu.jpg" >
                 </a>
             </div>
         </div>
@@ -50,14 +50,6 @@ use  yii\helpers\Url;
                 </a>
             </div>
         </div>
-         <div class="catalog">
-            <div class="content">
-                <a href="<?php echo Url::to(['site/theme','type'=>'6','page' => '1']); ?>">
-                    <h3 style="color:#edc35f ">个人成长</h3>
-                    <img class="theme-img" src="images/geren.jpg" >
-                </a>
-            </div>
-        </div>
         <div class="catalog">
             <div class="content">
                 <a href="<?php echo Url::to(['site/theme','type'=>'7','page' => '1']); ?>">
@@ -65,6 +57,15 @@ use  yii\helpers\Url;
                     <img class="theme-img" src="images/xing.jpg" >
                 </a>
            </div>
+        </div>
+
+         <div class="catalog">
+            <div class="content">
+                <a href="<?php echo Url::to(['site/theme','type'=>'6','page' => '1']); ?>">
+                    <h3 style="color:#edc35f ">心理测试</h3>
+                    <img class="theme-img" src="images/xinliceshi.jpg" >
+                </a>
+            </div>
         </div>
         <div class="catalog">
             <div class="content">
