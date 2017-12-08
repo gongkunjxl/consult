@@ -421,6 +421,7 @@ class SiteController extends Controller
             $sel_sql = "SELECT * FROM con_article where themeId=$type[1]  ORDER BY ctime desc LIMIT $start,10";
             $getinfo =  $db->createCommand($sel_sql)->queryAll();  
 
+
             //获取评论数据
             if(!empty($getinfo))
             {
@@ -438,6 +439,9 @@ class SiteController extends Controller
                     //时间 作者
                     $tm=date("Y-m-d H:i:s",$getinfo[$i]['ctime']);
                     $getinfo[$i]['time'] = $tm;
+                    $getinfo[$i]['content']=str_replace("\\n","<br>",$getinfo[$i]['content']);
+                    $getinfo[$i]['content']=str_replace("\n","<br>",$getinfo[$i]['content']);
+                    $getinfo[$i]['content']=str_replace("\r\n","<br>",$getinfo[$i]['content']);
 
                     //作者
                     $user_id = $getinfo[$i]['userId'];
@@ -480,6 +484,9 @@ class SiteController extends Controller
                 $data['status'] = 200;
                 $tm=date("Y-m-d H:i:s",$artinfo['ctime']);
                 $artinfo['time'] = $tm;
+                $artinfo['content']=str_replace("\\n","<br>",$artinfo['content']);
+                $artinfo['content']=str_replace("\n","<br>",$artinfo['content']);
+                $artinfo['content']=str_replace("\r\n","<br>",$artinfo['content']);
                 //作者
                 $user_id = $artinfo['userId'];
                 $sel_sql = "SELECT nickname FROM con_user where id=$user_id";

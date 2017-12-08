@@ -28,7 +28,13 @@ $user_id =   $session->get('userId');
                                    <font class="fs-16"><?php echo $data['artinfo']['author'];?>&nbsp;&nbsp;&nbsp;&nbsp;</font>
                                    <time class="ask_right" style="font-size: 14px;"><?php echo $data['artinfo']['time'];?></time>
                                </div>
-                               <p style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $data['artinfo']['content'];?></p>
+                               <?php echo $data['artinfo']['content']; ?>
+                               
+                               <!--  <pre style="white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;"><?php// echo $data['artinfo']['content']; ?></pre> -->
+                                <!-- <p style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;<?php //echo $data['artinfo']['content'];?></p> -->
+                             <!--   <p>
+                                 我跟老公现在算是在备孕期间，孕前检查结果我很正常，他的结果不太好，精子质量不好，我就让他吃点对精子好一点的，牛奶 坚果什么的。让他少抽点烟，少喝点酒。因为老家有事需要我回去一趟，然后我就回去了，走的时候我想他应该会自觉的，也就随便交代了一下，办完事我就回来了。我是晚上12点的火车票，早上7点半可以到，我5点钟因为火车上很吵睡不着，我就给他发微信，没回我，我想他肯定在睡觉，结果我下火车快到家了，他还是没有回我微信，我想 今天他休息肯定还在睡觉，然后我到家了一看他居然没在家，然后我就给他打电话，问他人去哪了，他说他在吃早餐，等下要去公司开会，我说你没看到我给你发微信吗，也不回下，然后他就撒谎说 昨天晚上打游戏的太晚了，我立马把游戏打开看，从我回老家后他本来就没有玩那个游戏因为没有对战记录，下午他回来，我发现他嘴里有酒味，我就说你昨天晚上是去喝酒了吧，后来他才承认说他趁我不在，就去喝酒了，我说你不知道我几点到吗，也不发微信关心下我，我发了你还不回，以为你在睡觉呢，结果回来你出门了……我心好累 明明宝宝是两个人的事，为什么就我一个在做准备，每天牛奶给他冲好，要看着他不能抽烟，他跟同事吃饭，我要交代不要喝酒，结果我才走了两天，他就迫不及待的去喝酒了，哎
+                               </p> -->
                            </div>
                            <div class="info">
                               <!--  <time class="ask_right">&nbsp;&nbsp;被浏览32次</time> -->

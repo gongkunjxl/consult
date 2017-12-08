@@ -289,7 +289,7 @@ $this->title = 'Register';
 			    data: data,
 			    success: function (data) {
 			     	// alert(data.status);
-			     	re_status = data.status;
+			     	re_status = data.postdata;
 			    },
 			    error: function(data) {
                	 	alert("Sorry error");
