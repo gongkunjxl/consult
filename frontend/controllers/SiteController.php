@@ -441,7 +441,7 @@ class SiteController extends Controller
                     $getinfo[$i]['time'] = $tm;
                     // $getinfo[$i]['content']=str_replace("\\n","<br>",$getinfo[$i]['content']);
                     $getinfo[$i]['content']=str_replace("\n","<br>",$getinfo[$i]['content']);
-                    $getinfo[$i]['content']=str_replace("\r\n","<br>",$getinfo[$i]['content']);
+                    // $getinfo[$i]['content']=str_replace("\r\n","<br>",$getinfo[$i]['content']);
 
                     //作者
                     $user_id = $getinfo[$i]['userId'];
@@ -486,7 +486,7 @@ class SiteController extends Controller
                 $artinfo['time'] = $tm;
                 // $artinfo['content']=str_replace("\\n","<br>",$artinfo['content']);
                 $artinfo['content']=str_replace("\n","<br>",$artinfo['content']);
-                $artinfo['content']=str_replace("\r\n","<br>",$artinfo['content']);
+                // $artinfo['content']=str_replace("\r\n","<br>",$artinfo['content']);
                 //作者
                 $user_id = $artinfo['userId'];
                 $sel_sql = "SELECT nickname FROM con_user where id=$user_id";
