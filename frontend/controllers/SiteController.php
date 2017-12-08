@@ -439,7 +439,7 @@ class SiteController extends Controller
                     //时间 作者
                     $tm=date("Y-m-d H:i:s",$getinfo[$i]['ctime']);
                     $getinfo[$i]['time'] = $tm;
-                    $getinfo[$i]['content']=str_replace("\\n","<br>",$getinfo[$i]['content']);
+                    // $getinfo[$i]['content']=str_replace("\\n","<br>",$getinfo[$i]['content']);
                     $getinfo[$i]['content']=str_replace("\n","<br>",$getinfo[$i]['content']);
                     $getinfo[$i]['content']=str_replace("\r\n","<br>",$getinfo[$i]['content']);
 
@@ -484,7 +484,7 @@ class SiteController extends Controller
                 $data['status'] = 200;
                 $tm=date("Y-m-d H:i:s",$artinfo['ctime']);
                 $artinfo['time'] = $tm;
-                $artinfo['content']=str_replace("\\n","<br>",$artinfo['content']);
+                // $artinfo['content']=str_replace("\\n","<br>",$artinfo['content']);
                 $artinfo['content']=str_replace("\n","<br>",$artinfo['content']);
                 $artinfo['content']=str_replace("\r\n","<br>",$artinfo['content']);
                 //作者
